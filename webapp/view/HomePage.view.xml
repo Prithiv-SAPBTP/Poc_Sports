@@ -1,0 +1,92 @@
+<mvc:View controllerName="decathlon.controller.HomePage"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:l="sap.ui.layout">
+    
+    <Page id="page" title="{i18n>title}">
+	 <Bar class="bar" design="Header">
+              <contentLeft>
+                <Image
+                  class="image1"
+                  src="img/logo.webp"
+                  width="90px"
+                  height="47px" />
+              </contentLeft>
+ 
+              <contentLeft>
+                <Title
+                  text="{pageModel>/pageTitle}"
+                  level="H4"
+                  class="HomeText" />
+              </contentLeft>
+              <contentRight>
+                <Button
+                  icon="sap-icon://question-mark"
+                  tooltip="Help"
+                  type="Transparent"
+                  press="onHelpPress"
+                  class="transparentButton" />
+                  </contentRight>
+            </Bar>
+		<IconTabHeader mode="Inline" select="onTabSelect">
+		<items>
+			<IconTabFilter key="Purchase" text="Purchase"  />
+			<IconTabFilter key="Finance" text="Finance" />
+			<IconTabFilter key="Warranty" text="Warranty" />
+			<IconTabFilter key="Publications" text="Publications"/>
+		</items>
+	</IconTabHeader>
+    <Carousel id="sportsCarousel" height="400px" width="100%" >
+                <ScrollContainer horizontal="true" vertical="false" height="350px">
+    <HBox items="">
+       
+        <VBox class="sapUiSmallMargin" >
+            <Image src="img/bag.jpg" width="250px" height="250px"/>
+            <Text text="Trending Bags"/>
+            <Text text="₹459 Onwards" class="sapUiSmallMarginTop"/>
+        </VBox>
+         <VBox class="sapUiSmallMargin">
+            <Image src="img/shoes.jpg" width="250px" height="250px"/>
+            <Text text="Top Brand Shoes"/>
+            <Text text="₹399 Onwards" class="sapUiSmallMarginTop"/>
+        </VBox>
+          <VBox class="sapUiSmallMargin">
+            <Image src="img/jacket.jpg" width="250px" height="250px"/>
+            <Text text="Stylish Jackets"/>
+            <Text text="₹799 Onwards" class="sapUiSmallMarginTop"/>
+        </VBox>
+          <VBox class="sapUiSmallMargin">
+            <Image src="img/hike.webp" width="250px" height="250px"/>
+            <Text text="Hiking and Trekking products"/>
+            <Text text="₹999 Onwards" class="sapUiSmallMarginTop"/>
+        </VBox>
+         <VBox class="sapUiSmallMargin">
+            <Image src="img/Cycling.jpg" width="250px" height="250px"/>
+            <Text text="Top Cycling kits"/>
+            <Text text="₹1399 Onwards" class="sapUiSmallMarginTop"/>
+        </VBox>
+         <VBox class="sapUiSmallMargin">
+            <Image src="img/winter.jpg" width="250px" height="250px"/>
+            <Text text="Limited winter items"/>
+            <Text text="₹699 Onwards" class="sapUiSmallMarginTop"/>
+        </VBox>
+         <VBox class="sapUiSmallMargin ">
+            <Image src="img/gympic.jpg" width="250px" height="250px"/>
+            <Text text="Limited Gym items sale"/>
+            <Text text="₹199 Onwards" class="sapUiSmallMarginTop"/>
+        </VBox>
+    </HBox>  
+</ScrollContainer>
+
+</Carousel>
+		<Carousel class="sapUiContentPadding" loop="true"   >
+		<Image src="https://techstory.in/wp-content/uploads/2023/03/img_1677729658049_390.jpg" width="90%"  />
+		<Image src="https://media.sudouest.fr/12564735/1200x-1/decathlon.jpg"   width="100%" />
+		<Image src="https://www.theindianwire.com/wp-content/uploads/2019/04/bneGeneric-bneCompany-retail-store-shop-decathlon-169.jpg" width="100%" />
+		<Image src="https://www.joonsquare.com/usermanage/image/business/decathlon-zirakpur-mohali-63848/decathlon-zirakpur-mohali-decathlon-4.jpg" alt="" width="100%" />
+</Carousel>
+
+    </Page>
+       
+
+</mvc:View>

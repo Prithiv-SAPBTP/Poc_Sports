@@ -1,0 +1,81 @@
+.loginPage {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loginForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(13, 14, 14, 0.6);
+    padding: 2rem;
+    border-radius: 10px;
+    gap: 1.5rem;
+    max-width: 400px;
+    width: 100%;
+}
+
+.icontab {
+    background-color: rgba(13, 14, 14, 0.3);
+    border-radius: 10px;
+}
+
+.titleText {
+    font-size: 1.5rem;
+    color: white;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.loginButton {
+    color: rgb(28, 75, 230);
+    width: 100%;
+    border-radius: 10px;
+}
+
+.img {
+    background-image: url(https://okdiario.com/img/2022/02/21/decathlon-2.jpg);
+    background-size: cover;
+    /* background-position: center; */
+}
+
+.label {
+    color: white;
+}
+
+.bar{
+  height: 60px !important;
+  display: flex;
+  align-items: center !important;
+  background-color: rgb(126, 225, 241) !important;
+  }
+  .image1{
+    object-fit: contain;  
+    display: block;
+    margin-left: 20px !important;
+  }
+  .HomeText{
+ 
+    color: white !important;
+  }
+  .transparentButton .sapMBtnInner {
+    background-color: transparent !important;
+  }
+  .transparentButton:hover .sapMBtnInner {
+    background-color: transparent !important;
+   
+  }
+  .transparentButton .sapMBtnIcon {
+    color: rgb(22, 21, 21) !important;
+  }
+
+.flex{
+  align-items: center;
+  justify-content: center;
+}
+.gymflex{
+  border: 2px black;
+}

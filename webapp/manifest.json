@@ -1,0 +1,131 @@
+{
+  "_version": "1.65.0",
+  "sap.app": {
+    "id": "decathlon",
+    "type": "application",
+    "i18n": "i18n/i18n.properties",
+    "applicationVersion": {
+      "version": "0.0.1"
+    },
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}",
+    "resources": "resources.json",
+    "sourceTemplate": {
+      "id": "@sap/generator-fiori:basic",
+      "version": "1.18.4",
+      "toolsId": "be9e5682-8a54-43c8-9b84-aacf87c50a67"
+    }
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "icons": {
+      "icon": "",
+      "favIcon": "",
+      "phone": "",
+      "phone@2": "",
+      "tablet": "",
+      "tablet@2": ""
+    },
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+  "sap.ui5": {
+    "flexEnabled": false,
+    "dependencies": {
+      "minUI5Version": "1.139.0",
+      "libs": {
+        "sap.m": {},
+        "sap.ui.core": {}
+      }
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "decathlon.i18n.i18n"
+        }
+      }
+    },
+    "resources": {
+      "css": [
+        {
+          "uri": "css/style.css"
+        }
+      ]
+    },
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "controlAggregation": "pages",
+        "controlId": "app",
+        "transition": "slide",
+        "type": "View",
+        "viewType": "XML",
+        "path": "decathlon.view",
+        "async": true,
+        "viewPath": "decathlon.view"
+      },
+      "routes": [
+        {
+          "name": "RouteLoginPage",
+          "pattern": ":?query:",
+          "target": [
+            "TargetLoginPage"
+          ]
+        },
+         {
+          "name": "HomePage",
+          "pattern": "HomePage",
+          "target": [
+            "Secondpage"
+          ]
+        },
+        {
+          "name": "CatalogueOrder",
+          "pattern": "CatalogueOrder",
+          "target": [
+            "CataloguePage"
+          ]
+        },
+        {
+          "name": "GymPage",
+          "pattern": "GymPage",
+          "target": [
+            "Gym"
+          ]
+        }
+      ],
+      "targets": {
+        "TargetLoginPage": {
+          "id": "LoginPage",
+          "name": "LoginPage"
+        },
+        "Secondpage": {
+          "id": "HomePage",
+          "name": "HomePage"
+        },
+        "CataloguePage": {
+          "id": "CatalogueOrder",
+          "name": "CatalogueOrder"
+        },
+        "Gym": {
+          "id": "GymPage",
+          "name": "GymPage"
+        }
+      }
+    },
+    "rootView": {
+      "viewName": "decathlon.view.App",
+      "type": "XML",
+      "id": "App",
+      "async": true
+    }
+  }
+}

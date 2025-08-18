@@ -1,0 +1,25 @@
+{
+    "roles": [{
+      "Fullname": "Prithiv",
+      "Password": "123456",  
+      "Email": "prithiv.g10@gmail.com"
+    },
+    {
+      "Fullname": "Sam",
+      "Password": "123456",  
+      "Email": "prithiv.g10@gmail.com"
+    },
+    {
+      "Fullname": "Deepak",
+      "Password": "123456",  
+      "Email": "prithiv.g10@gmail.com"
+    },
+    {
+      "Fullname": "Sabari",
+      "Password": "123456",  
+      "Email": "prithiv.g10@gmail.com"
+    }
+  
+  ]
+  }
+  

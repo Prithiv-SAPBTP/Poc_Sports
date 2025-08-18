@@ -1,0 +1,56 @@
+<mvc:View controllerName="decathlon.controller.LoginPage"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:l="sap.ui.layout">
+    
+    <Page id="page" title="{i18n>title}" class="img">
+    	
+     <FlexBox class="loginPage"> 
+        <VBox class="loginForm" >
+        	<IconTabHeader mode="Inline" class="icontab" select="onSelect" >
+		<items >
+			<IconTabFilter key="signin" text="Signin" />
+			<IconTabFilter key="signup" text="signup" />
+		</items>
+        
+	</IconTabHeader>
+
+    <!-- signin  -->
+     <VBox id="signinForm" visible="true">
+                    <l:VerticalLayout class="sapUiContentPadding" width="100%">
+                        <Title text="Signin" class="titleText" />
+                        <Label text="Enter EmailID:" class="label" />
+                        <Input id="signinEmail" type="Email" placeholder="Enter email" width="100%" />
+                        
+                        <Label text="Enter Password:" class="label" />
+                        <Input id="signinPassword" type="Password" placeholder="Enter password" width="100%" />
+                        
+                        <Button text="Login" press="onPressSignin" class="loginButton" />
+                        
+                    </l:VerticalLayout>
+                </VBox>
+
+                <!-- signup  -->
+
+                 <VBox id="signupForm" visible="false">
+                    <l:VerticalLayout class="sapUiContentPadding" width="100%">
+                        <Title text="Signup" class="titleText" />
+                        <Label text="Enter Full Name:" class="label" />
+                        <Input id="signupName" placeholder="Enter full name" width="100%" />
+                        
+                        <Label text="Enter EmailID:" class="label" />
+                        <Input id="signupEmail" type="Email" placeholder="Enter email" width="100%" />
+                        
+                        <Label text="Enter Password:" class="label" />
+                        <Input id="signupPassword" type="Password" placeholder="Enter password" width="100%" />
+                        
+                        <Label text="Confirm Password:" class="label" />
+                        <Input id="signupConfirmPassword" type="Password" placeholder="Confirm password" width="100%" />
+                        
+                        <Button text="Register" press="onPressSignup" class="loginButton" />
+                    </l:VerticalLayout>
+                </VBox>
+    </VBox>
+      </FlexBox>
+    </Page>
+</mvc:View>

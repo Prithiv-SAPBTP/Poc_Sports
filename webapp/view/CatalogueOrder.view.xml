@@ -1,0 +1,89 @@
+<mvc:View controllerName="decathlon.controller.CatalogueOrder"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+   >
+   <Page title="Catalogue">
+  <Bar class="bar" design="Header">
+              <contentLeft>
+                <Image
+                  class="image1"
+                  src="img/logo.webp"
+                  width="90px"
+                  height="47px" />
+              </contentLeft>
+ 
+              <contentRight>
+                <Button
+                  icon="sap-icon://question-mark"
+                  tooltip="Help"
+                  press="onHelpPress"
+                  class="transparentButton" />
+                  </contentRight>
+            </Bar>
+    <VBox fitContainer="true" class="sapUiContentPadding">
+
+        <!-- <HBox justifyContent="SpaceBetween" alignItems="Center">
+            <Text text="Electronics Parts Catalogue > Categories" design="Bold" />
+            <HBox alignItems="Center" fitContainer="true" spacing="1rem">
+                <Text text="Enable Prices:" />
+                <Switch state="false" type="AcceptReject" change=".onTogglePrices" />
+            </HBox>
+        </HBox> -->
+        
+        <FlexBox wrap="Wrap" justifyContent="Start" alignItems="Start" class="flex">
+
+            <VBox width="200px" class="sapUiSmallMargin cardBox">
+                <Image src="img/gympic.jpg" width="200px" height="150px"  press="onPressGym" />
+                <Text text="Gym and Fitness" textAlign="Center"  />
+            </VBox>
+
+
+            <VBox width="200px" class="sapUiSmallMargin cardBox"  >
+                <Image src="img/shoes.jpg" width="200px" height="150px" press="onPressShoes" />
+                <Text text="Shoes" textAlign="Center"  />
+            </VBox>
+
+            <VBox width="200px" class="sapUiSmallMargin cardBox" >
+                <Image src="img/Activewear1.jpg" width="190px" height="150px" press="onPressActivewears" />
+                <Text text="Active wears" textAlign="Center" />
+            </VBox>
+
+            <VBox width="200px" class="sapUiSmallMargin cardBox">
+                <Image src="img/Bags.jpg" width="200px" height="150px" press="onPressBags"/>
+                <Text text="Bags and Backpacks" textAlign="Center"/>
+            </VBox>
+
+              <VBox width="200px" class="sapUiSmallMargin cardBox">
+                <Image src="img/sports.jpg" width="200px" height="150px" press="onPressSports"/>
+                <Text text="Sports Accessories" textAlign="Center"/>
+            </VBox>
+
+            <VBox width="200px" class="sapUiSmallMargin cardBox">
+                <Image src="img/Hikking.jpg" width="200px" height="150px" press="onPressHiking"/>
+                <Text text="Hiking and Trakking" textAlign="Center"/>
+            </VBox>
+
+            <VBox width="200px" class="sapUiSmallMargin cardBox">
+                <Image src="img/Cycling.jpg" width="200px" height="150px" press="onPressCycle"/>
+                <Text text="Cycling" textAlign="Center"/>
+            </VBox>
+
+             <VBox width="200px" class="sapUiSmallMargin cardBox">
+                <Image src="img/swimming.jpg" width="200px" height="150px" press="onPressSwimming"/>
+                <Text text="Swimming" textAlign="Center"/>
+            </VBox>
+
+              <VBox width="200px" class="sapUiSmallMargin cardBox">
+                <Image src="img/winter.jpg" width="200px" height="150px" press="onPressWinterEssential"/>
+                <Text text="Winter Essentials" textAlign="Center"/>
+            </VBox>
+
+           <VBox width="200px" class="sapUiSmallMargin cardBox">
+                <Image src="img/jacket.jpg" width="200px" height="150px" press="onPressJackets"/>
+                <Text text="Jackets" textAlign="Center"/>
+            </VBox>
+        </FlexBox>
+
+    </VBox>
+   </Page> 
+</mvc:View>

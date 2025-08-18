@@ -1,0 +1,114 @@
+<mvc:View controllerName="decathlon.controller.GymPage"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:l="sap.ui.layout">
+    
+    <Page id="page"  title="Gym and Fitness">
+      <Bar class="bar" design="Header">
+              <contentLeft>
+                <Image
+                  class="image1"
+                  src="img/logo.webp"
+                  width="90px"
+                  height="47px" />
+              </contentLeft>
+ 
+              <contentLeft>
+                <Title
+                  text="{pageModel>/pageTitle}"
+                  level="H4"
+                  class="HomeText" />
+              </contentLeft>
+ 
+              <contentRight>
+                <Button
+                  icon="sap-icon://question-mark"
+                  tooltip="Help"
+                  type="Transparent"
+                  press="onHelpPress"
+                  class="transparentButton" />
+ 
+                <Button
+                  icon="sap-icon://cart"
+                  tooltip="View Cart"
+                  type="Transparent"
+                  press="onCartPress"
+                  class="transparentButton" />
+ 
+               
+              </contentRight>
+            </Bar>
+
+    <ScrollContainer width="100%" height="100%" vertical="true">
+    
+        <FlexBox wrap="Wrap" justifyContent="Center">
+
+            <VBox width="300px" class="sapUiSmallMargin" >
+                <Carousel height="200px" width="100%">
+                    <Image src="img/dumbbells1.jpg" />
+                    <Image src="img/dumbbells2.jpg" />
+                </Carousel>
+
+                <HBox justifyContent="SpaceBetween">
+                    <ObjectStatus text="4.6" icon="sap-icon://favorite" state="Success"/>
+                    <Button icon="sap-icon://heart" type="Transparent" press="onPressWishlist"/>
+                </HBox>
+
+                <Text text="Dumbells" />
+                <Text text="Best selling Dumbells with Rack " maxLines="2" wrapping="true" />
+
+                <HBox alignItems="Center" >
+                    <ObjectNumber number="2499" unit="₹" emphasized="true"/>
+                    <!-- <Text text="₹ 3499" class="strikePrice sapUiTinyMarginBegin"/>
+                    <Label text="28% Off" design="Bold" class="discountLabel"/> -->
+                </HBox>
+                <Button text="ADD TO CART" type="Emphasized" press="onPressAddToCart" class="sapUiSmallMarginTop"/>
+            </VBox>
+            
+            
+            <VBox width="300px" class="sapUiSmallMargin">
+                <Carousel height="200px" width="100%">
+                    <Image src="img/skippingrope1.jpg" />
+                    <Image src="img/skippingrope2.webp" />
+                </Carousel>
+
+                <HBox justifyContent="SpaceBetween">
+                    <ObjectStatus text="4.2" icon="sap-icon://favorite" state="Success"/>
+                    <Button icon="sap-icon://heart" type="Transparent" press="onPressWishlist"/>
+                </HBox>
+
+                <Text text="Skipping Rope" />
+                <Text text="Premium Quality Skipping Rope " maxLines="2" wrapping="true" />
+
+                <HBox alignItems="Center" >
+                    <ObjectNumber number="199" unit="₹" emphasized="true"/>
+                </HBox>
+                <Button text="ADD TO CART" type="Emphasized" press="onPressAddToCart" class="sapUiSmallMarginTop"/>
+            </VBox>
+
+                 <VBox width="300px" class="sapUiSmallMargin">
+                <Carousel height="200px" width="100%">
+                    <Image src="img/Gymbags.jpg" class="imgGym" />
+                    <Image src="img/Gymbags1.jpg" />
+                </Carousel>
+
+                <HBox justifyContent="SpaceBetween">
+                    <ObjectStatus text="4.8" icon="sap-icon://favorite" state="Success"/>
+                    <Button icon="sap-icon://heart" type="Transparent" press="onPressWishlist"/>
+                </HBox>
+
+                <Text text="Gym Bags" />
+                <Text text="Spacious and stylish Gym Bag" maxLines="2" wrapping="true" />
+
+                <HBox alignItems="Center" >
+                    <ObjectNumber number="1299" unit="₹" emphasized="true"/>
+                </HBox>
+                <Button text="ADD TO CART" type="Emphasized" press="onPressAddToCart" class="sapUiSmallMarginTop"/>
+            </VBox>
+
+
+        </FlexBox>
+    </ScrollContainer>
+
+    </Page>
+</mvc:View>
