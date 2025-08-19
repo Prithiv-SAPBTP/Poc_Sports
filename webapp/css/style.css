@@ -11,16 +11,20 @@
     align-items: center;
     justify-content: center;
     background-color: rgba(13, 14, 14, 0.6);
-    padding: 2rem;
+    /* padding: 2rem; */
     border-radius: 10px;
-    gap: 1.5rem;
+    /* gap: 1.5rem; */
     max-width: 400px;
     width: 100%;
 }
-
+.signin{
+  width: 100%;
+ 
+}
 .icontab {
-    background-color: rgba(13, 14, 14, 0.3);
-    border-radius: 10px;
+    background-color: rgba(13, 14, 14, 0.6);
+    border-radius: 10px 10px 0px 0px;
+     border: blue 10px;
 }
 
 .titleText {
@@ -37,7 +41,7 @@
 }
 
 .img {
-    background-image: url(https://okdiario.com/img/2022/02/21/decathlon-2.jpg);
+    background-image: url("../img/frontpage.png");
     background-size: cover;
     /* background-position: center; */
 }
