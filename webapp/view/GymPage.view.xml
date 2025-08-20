@@ -3,41 +3,8 @@
     xmlns="sap.m"
     xmlns:l="sap.ui.layout">
     
-    <Page id="page"  title="Gym and Fitness">
-      <Bar class="bar" design="Header">
-              <contentLeft>
-                <Image
-                  class="image1"
-                  src="img/logo.webp"
-                  width="90px"
-                  height="47px" />
-              </contentLeft>
- 
-              <contentLeft>
-                <Title
-                  text="{pageModel>/pageTitle}"
-                  level="H4"
-                  class="HomeText" />
-              </contentLeft>
- 
-              <contentRight>
-                <Button
-                  icon="sap-icon://question-mark"
-                  tooltip="Help"
-                  type="Transparent"
-                  press="onHelpPress"
-                  class="transparentButton" />
- 
-                <Button
-                  icon="sap-icon://cart"
-                  tooltip="View Cart"
-                  type="Transparent"
-                  press="onCartPress"
-                  class="transparentButton" />
- 
-               
-              </contentRight>
-            </Bar>
+    <Page id="page"  title="Gym and Fitness" showHeader="false">
+    <mvc:XMLView viewName="decathlon.view.TitleBar"/>
 
     <ScrollContainer width="100%" height="100%" vertical="true">
     

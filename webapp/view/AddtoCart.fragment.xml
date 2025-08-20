@@ -15,6 +15,7 @@
 </core:FragmentDefinition> -->
 
 <core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+
     <Dialog id="cartDialog" title="Add To Cart" class="sapUiContentPadding" draggable="true" resizable="true">
 
         <VBox class="sapUiMediumMargin">
@@ -47,5 +48,6 @@
             <Button text="Cancel" type="Reject" icon="sap-icon://decline" press="onCloseCart"/>
         </endButton>
     </Dialog>
+
 </core:FragmentDefinition>
 

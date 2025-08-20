@@ -1,11 +1,11 @@
 <mvc:View controllerName="decathlon.controller.LoginPage"
     xmlns:mvc="sap.ui.core.mvc"
     xmlns="sap.m"
-    xmlns:l="sap.ui.layout">
+    xmlns:l="sap.ui.layout" >
     
-    <Page id="page" title="{i18n>title}" class="img">
+    <Page title="{i18n>title}" class="img" enableScrolling="false" >
     	
-     <FlexBox class="loginPage"> 
+     <VBox class="loginPage" > 
         <VBox class="loginForm" >
         <VBox class="signin" >
         	<IconTabHeader mode="Inline" class="icontab" select="onSelect" >
@@ -17,9 +17,9 @@
 	</IconTabHeader>
 </VBox>
     <!-- signin  -->
-     <VBox id="signinForm" visible="true">
+     <VBox id="signinForm" >
                     <l:VerticalLayout class="sapUiContentPadding" width="100%">
-                        <Title text="Signin" class="titleText" />
+                        <!-- <Title text="Signin" class="titleText" /> -->
                         <Label text="Email:" class="label" />
                         <Input id="signinEmail" type="Email" placeholder="Enter email" width="100%" />
                         
@@ -35,7 +35,7 @@
 
                  <VBox id="signupForm" visible="false">
                     <l:VerticalLayout class="sapUiContentPadding" width="100%">
-                        <Title text="Sign up" class="titleText" />
+                        <!-- <Title text="Sign up" class="titleText" /> -->
                         <Label text="Full Name:" class="label" />
                         <Input id="signupName" placeholder="Enter full name" width="100%" />
                         
@@ -52,6 +52,6 @@
                     </l:VerticalLayout>
                 </VBox>
     </VBox>
-      </FlexBox>
+      </VBox>
     </Page>
 </mvc:View>

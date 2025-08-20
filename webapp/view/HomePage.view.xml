@@ -1,33 +1,10 @@
-<mvc:View controllerName="decathlon.controller.HomePage"
+<mvc:View xmlns:f2="sap.f" controllerName="decathlon.controller.HomePage"
     xmlns:mvc="sap.ui.core.mvc"
     xmlns="sap.m"
-    xmlns:l="sap.ui.layout">
-    
-    <Page id="page" title="{i18n>title}">
-	 <Bar class="bar" design="Header">
-              <contentLeft>
-                <Image
-                  class="image1"
-                  src="img/logo.webp"
-                  width="90px"
-                  height="47px" />
-              </contentLeft>
- 
-              <contentLeft>
-                <Title
-                  text="{pageModel>/pageTitle}"
-                  level="H4"
-                  class="HomeText" />
-              </contentLeft>
-              <contentRight>
-                <Button
-                  icon="sap-icon://question-mark"
-                  tooltip="Help"
-                  type="Transparent"
-                  press="onHelpPress"
-                  class="transparentButton" />
-                  </contentRight>
-            </Bar>
+    xmlns:l="sap.ui.layout" displayBlock="true">
+    <Page showHeader="false">
+     <mvc:XMLView viewName="decathlon.view.TitleBar"/>
+
 		<IconTabHeader mode="Inline" select="onTabSelect">
 		<items>
 			<IconTabFilter key="Purchase" text="Purchase"  />
@@ -85,8 +62,5 @@
 		<Image src="https://www.theindianwire.com/wp-content/uploads/2019/04/bneGeneric-bneCompany-retail-store-shop-decathlon-169.jpg" width="100%" />
 		<Image src="https://www.joonsquare.com/usermanage/image/business/decathlon-zirakpur-mohali-63848/decathlon-zirakpur-mohali-decathlon-4.jpg" alt="" width="100%" />
 </Carousel>
-
-    </Page>
-       
-
+</Page>
 </mvc:View>
