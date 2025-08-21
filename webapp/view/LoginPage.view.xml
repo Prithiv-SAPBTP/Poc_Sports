@@ -8,9 +8,9 @@
      <VBox class="loginPage" > 
         <VBox class="loginForm" >
         <VBox class="signin" >
-        	<IconTabHeader mode="Inline" class="icontab" select="onSelect" >
-		<items >
-			<IconTabFilter key="signin" text="Signin" />
+        	<IconTabHeader class="icontab" select="onSelect" >
+		<items  >        
+			<IconTabFilter key="signin" text="Signin"  />
 			<IconTabFilter key="signup" text="signup" />
 		</items>
         

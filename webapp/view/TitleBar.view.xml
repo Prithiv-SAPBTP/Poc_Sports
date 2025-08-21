@@ -8,8 +8,7 @@
                 <Image
                   class="image1"
                   src="../img/logo1.webp"
-                  width="110px"
-                  height="110px" />
+                  width="110px"/>
               </contentLeft>
  
               <contentLeft>

@@ -2,7 +2,7 @@
     xmlns:mvc="sap.ui.core.mvc"
     xmlns="sap.m"
    >
-   <Page title="Catalogue" showHeader="false">
+   <Page title="Catalogue" showHeader="false" >
    <mvc:XMLView viewName="decathlon.view.TitleBar"/>
 
     <VBox fitContainer="true" class="sapUiContentPadding">
@@ -19,7 +19,7 @@
 
         <HBox>
         <VBox>
-	        <GenericTile class="sapUiTinyMarginTop sapUiTinyMarginBegin tileLayout" backgroundImage="img/gympic.jpg" press="onPressGym" />
+	        <GenericTile width="230px" class="sapUiTinyMarginTop sapUiTinyMarginBegin tileLayout" backgroundImage="img/gympic.jpg" press="onPressGym" />
         <HBox justifyContent="Center" alignContent="Center">
             <Text text="Gym and Fitness"/>
         </HBox>    
@@ -28,7 +28,7 @@
 
         <HBox>
         <VBox>
-	        <GenericTile class="sapUiTinyMarginTop sapUiTinyMarginBegin tileLayout" backgroundImage="img/shoes.jpg" press="onPressShoes" />
+	        <GenericTile width="230px" class="sapUiTinyMarginTop sapUiTinyMarginBegin tileLayout" backgroundImage="img/shoes.jpg" press="onPressShoes" />
         <HBox justifyContent="Center" alignContent="Center">
             <Text text="Shoes"/>
         </HBox>    
@@ -37,7 +37,7 @@
 
         <HBox>
         <VBox>
-	        <GenericTile class="sapUiTinyMarginTop sapUiTinyMarginBegin tileLayout" backgroundImage="img/Activewear1.jpg" press="onPressActivewears" />
+	        <GenericTile width="230px" class="sapUiTinyMarginTop sapUiTinyMarginBegin tileLayout" backgroundImage="img/active.webp" press="onPressActivewears" />
         <HBox justifyContent="Center" alignContent="Center">
             <Text text="Active wears"/>
         </HBox>    
@@ -46,7 +46,7 @@
 
         <HBox>
         <VBox>
-	        <GenericTile class="sapUiTinyMarginTop sapUiTinyMarginBegin tileLayout" backgroundImage="img/Bags.jpg" press="onPressBags" />
+	        <GenericTile width="230px" class="sapUiTinyMarginTop sapUiTinyMarginBegin tileLayout" backgroundImage="img/Bagss.jpg" press="onPressBags" />
         <HBox justifyContent="Center" alignContent="Center">
             <Text text="Bags"/>
         </HBox>    
@@ -55,7 +55,7 @@
 
         <HBox>
         <VBox>
-	        <GenericTile class="sapUiTinyMarginTop sapUiTinyMarginBegin tileLayout" backgroundImage="img/sports.jpg" press="onPressSports" />
+	        <GenericTile width="230px" class="sapUiTinyMarginTop sapUiTinyMarginBegin tileLayout" backgroundImage="img/sports.jpg" press="onPressSports" />
         <HBox justifyContent="Center" alignContent="Center">
             <Text text="Sports Accessories"/>
         </HBox>    
@@ -64,33 +64,48 @@
 
         <HBox>
         <VBox>
-	        <GenericTile class="sapUiTinyMarginTop sapUiTinyMarginBegin tileLayout" backgroundImage="img/Hikking.jpg" press="onPressHiking" />
+	        <GenericTile width="230px"  class="sapUiTinyMarginTop sapUiTinyMarginBegin tileLayout" backgroundImage="img/jacket.jpg"  press="onPressJackets" />
+        <HBox justifyContent="Center" alignContent="Center">
+            <Text text="Jackets"/>
+        </HBox>    
+        </VBox>        
+        </HBox>
+
+        <HBox>
+        <VBox>
+	        <GenericTile width="230px"  class="sapUiTinyMarginTop sapUiTinyMarginBegin tileLayout" backgroundImage="img/hiking.webp" press="onPressHiking" />
         <HBox justifyContent="Center" alignContent="Center">
             <Text text="Hiking and Trekking"/>
         </HBox>    
         </VBox>        
         </HBox>
 
+        <HBox>
+        <VBox>
+	        <GenericTile width="230px"  class="sapUiTinyMarginTop sapUiTinyMarginBegin tileLayout" backgroundImage="img/Cycling.jpg" press="onPressCycle" />
+        <HBox justifyContent="Center" alignContent="Center">
+            <Text text="Cycling"/>
+        </HBox>    
+        </VBox>        
+        </HBox>
 
-            <VBox width="200px" class="sapUiSmallMargin cardBox">
-                <Image src="img/Cycling.jpg" width="200px" height="150px" press="onPressCycle"/>
-                <Text text="Cycling" textAlign="Center"/>
-            </VBox>
+        <HBox>
+        <VBox>
+	        <GenericTile width="230px"  class="sapUiTinyMarginTop sapUiTinyMarginBegin tileLayout" backgroundImage="img/swimming.jpg" press="onPressSwimming" />
+        <HBox justifyContent="Center" alignContent="Center">
+            <Text text="Swimming"/>
+        </HBox>    
+        </VBox>        
+        </HBox>
 
-             <VBox width="200px" class="sapUiSmallMargin cardBox">
-                <Image src="img/swimming.jpg" width="200px" height="150px" press="onPressSwimming"/>
-                <Text text="Swimming" textAlign="Center"/>
-            </VBox>
-
-              <VBox width="200px" class="sapUiSmallMargin cardBox">
-                <Image src="img/winter.jpg" width="200px" height="150px" press="onPressWinterEssential"/>
-                <Text text="Winter Essentials" textAlign="Center"/>
-            </VBox>
-
-           <VBox width="200px" class="sapUiSmallMargin cardBox">
-                <Image src="img/jacket.jpg" width="200px" height="150px" press="onPressJackets"/>
-                <Text text="Jackets" textAlign="Center"/>
-            </VBox>
+        <HBox>
+        <VBox>
+	        <GenericTile width="230px"  class="sapUiTinyMarginTop sapUiTinyMarginBegin tileLayout" backgroundImage="img/win.webp" press="onPressWinterEssential" />
+        <HBox justifyContent="Center" alignContent="Center">
+            <Text text="Winter Essentials"/>
+        </HBox>    
+        </VBox>        
+        </HBox>
         </FlexBox>
 
     </VBox>
