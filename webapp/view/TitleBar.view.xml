@@ -1,40 +1,20 @@
 <mvc:View controllerName="decathlon.controller.TitleBar"
     xmlns:mvc="sap.ui.core.mvc"
-    xmlns="sap.m"
-    xmlns:l="sap.ui.layout">
+    xmlns="sap.m">
 
   <Bar class="bar" design="Header">
               <contentLeft>
-                <Image
-                  class="image1"
-                  src="../img/logo1.webp"
-                  width="110px"/>
+                <Image  src="../img/logo1.webp" class="image1"/>
               </contentLeft>
  
               <contentLeft>
-                <Title
-                  text="{pageModel>/pageTitle}"
-                  level="H4"
-                  class="HomeText" />
+                <Title  text="SPORTS" />
               </contentLeft>
  
               <contentRight>
-                <Button
-                  icon="sap-icon://question-mark"
-                  tooltip="Help"
-                  type="Transparent"
-                  press="onPressHelp" />
- 
-                <Button
-                  icon="sap-icon://heart-2"
-                  tooltip="Wishlist"
-                  type="Transparent"
-                  press="onPressWishlist" />
- 
-                <Button
-                  icon="sap-icon://cart"
-                  tooltip="Cart"
-                  press="onPressCart" />
+                <Button icon="sap-icon://question-mark" tooltip="Help" type="Transparent" press="onPressHelp" />
+                 <Button icon="sap-icon://heart-2" tooltip="Wishlist" type="Transparent" press="onPressWishlist" /> 
+                <Button icon="sap-icon://cart" tooltip="Cart" press="onPressCart" />
               </contentRight>
             </Bar>          
          

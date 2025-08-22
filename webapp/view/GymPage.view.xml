@@ -1,81 +1,143 @@
 <mvc:View controllerName="decathlon.controller.GymPage"
     xmlns:mvc="sap.ui.core.mvc"
+    xmlns:core="sap.ui.core"
     xmlns="sap.m"
-    xmlns:l="sap.ui.layout">
+    xmlns:l="sap.ui.layout"
+    xmlns:tnt="sap.tnt"
+	height="100%"
+	class="side-navigation-demo">
     
-    <Page id="page" title="Gym and Fitness" showHeader="false">
+    <Page id="page" title="Gym and Fitness" showHeader="false" enableScrolling="true">
         <mvc:XMLView viewName="decathlon.view.TitleBar"/>
+         <!-- <content>
+			<ComboBox>
+                <core:Item  text="Dumbells" />
+                <core:Item  text="Iron weighted plates" />
+                <core:Item  text="Rubber weighted plates" />
+                <core:Item  text="Kettlebells" />
+                <core:Item  text="Smith Machine" />
+                <core:Item  text="Leg Press Machine" />
+                <core:Item  text="Chest Press Machine" />
+                <core:Item  text="Lat Pulldown Machine" />
+                <core:Item  text="Cable Crossover Machine" />
+                <core:Item  text="Seated Row Machine" />
+                <core:Item  text="Leg Extension / Curl Machine" />
+                <core:Item  text="Preacher Curl Bench" />
+                <core:Item  text="Power Rack / Squat Rack" />
+			</ComboBox>
+		</content> -->
+        	<l:Splitter height="100%" width="100%">
+    <!-- Left Side: Category List -->
+    <VBox width="100%">
+        <List id="categoryList" mode="SingleSelectMaster">
+            <items>
+                <StandardListItem class="categoryList1" title="Dumbells" />
+                <StandardListItem class="categoryList1" title="Iron weighted plates" />
+                <StandardListItem class="categoryList1" title="Rubber weighted plates" />
+                <StandardListItem class="categoryList1" title="Kettlebells" />
+                <StandardListItem class="categoryList1" title="Smith Machine" />
+                <StandardListItem class="categoryList1" title="Leg Press Machine" />
+                <StandardListItem class="categoryList1" title="Chest Press Machine" />
+                <StandardListItem class="categoryList1" title="Lat Pulldown Machine" />
+                <StandardListItem class="categoryList1" title="Cable Crossover Machine" />
+            </items>
+        </List>
+        <layoutData>
+            <l:SplitterLayoutData size="20%" />
+        </layoutData>
+    </VBox>
 
-        <ScrollContainer width="100%" height="100%" vertical="true">
-            <FlexBox wrap="Wrap" justifyContent="Center">
+    <ScrollContainer width="100%" height="100%" vertical="true" horizontal="false" class="container">
+        <layoutData>
+            <l:SplitterLayoutData size="80%" />
+        </layoutData>
 
-                <!-- Dumbbells -->
-                <VBox width="300px" class="sapUiSmallMargin">
-                    <Carousel height="200px" width="100%">
-                        <Image src="img/dumbbells1.jpg" />
-                        <Image src="img/dumbbells2.jpg" />
-                    </Carousel>
+        <FlexBox wrap="Wrap" justifyContent="SpaceAround">
+            <!-- Dumbbells -->
+            <VBox width="300px" class="sapUiSmallMargin gympagebox">
+                <Carousel height="200px" width="100%">
+                    <Image src="img/dumbbells1.jpg" />
+                    <Image src="img/dumbbells2.jpg" />
+                </Carousel>
 
-                    <HBox justifyContent="SpaceBetween">
-                        <ObjectStatus text="4.6" icon="sap-icon://favorite" state="Success"/>
-                        <Button icon="sap-icon://heart" type="Transparent" press="onPressWishlist"/>
-                    </HBox>
+                <HBox justifyContent="SpaceBetween">
+                    <ObjectStatus text="4.6" icon="sap-icon://favorite" state="Success"/>
+                    <Button icon="sap-icon://heart-2" type="Transparent" press="onPressWishlist"/>
+                </HBox>
 
-                    <Text text="Dumbbells" />
-                    <Text text="Best selling Dumbbells with Rack" maxLines="2" wrapping="true" />
+                <Text text="Dumbbells" />
+                <Text text="Best selling Dumbbells with Rack" maxLines="2" wrapping="true" />
 
-                    <HBox alignItems="Center">
-                        <ObjectNumber number="2499" unit="₹" emphasized="true"/>
-                    </HBox>
-                    <Button text="ADD TO CART" type="Emphasized" 
-                            press="onPressAddToCart" class="sapUiSmallMarginTop"/>
-                </VBox>
+                <HBox alignItems="Center">
+                    <ObjectNumber number="2499" unit="₹" emphasized="true"/>
+                </HBox>
+                <Button text="ADD TO CART" press="onPressAddToCart" class="sapUiSmallMarginTop"/>
+            </VBox>
 
-                <!-- Skipping Rope -->
-                <VBox width="300px" class="sapUiSmallMargin">
-                    <Carousel height="200px" width="100%">
-                        <Image src="img/skippingrope1.jpg" />
-                        <Image src="img/skippingrope2.webp" />
-                    </Carousel>
+            <!-- Skipping Rope -->
+            <VBox width="300px" class="sapUiSmallMargin gympagebox">
+                <Carousel height="200px" width="100%">
+                    <Image src="img/skippingrope1.jpg" />
+                    <Image src="img/skippingrope2.webp" />
+                </Carousel>
 
-                    <HBox justifyContent="SpaceBetween">
-                        <ObjectStatus text="4.2" icon="sap-icon://favorite" state="Success"/>
-                        <Button icon="sap-icon://heart" type="Transparent" press="onPressWishlist"/>
-                    </HBox>
+                <HBox justifyContent="SpaceBetween">
+                    <ObjectStatus text="4.2" icon="sap-icon://favorite" state="Success"/>
+                    <Button icon="sap-icon://heart-2" type="Transparent" press="onPressWishlist"/>
+                </HBox>
 
-                    <Text text="Skipping Rope" />
-                    <Text text="Premium Quality Skipping Rope" maxLines="2" wrapping="true" />
+                <Text text="Skipping Rope" />
+                <Text text="Premium Quality Skipping Rope"/>
 
-                    <HBox alignItems="Center">
-                        <ObjectNumber number="199" unit="₹" emphasized="true"/>
-                    </HBox>
-                    <Button text="ADD TO CART" type="Emphasized" 
-                            press="onPressAddToCart" class="sapUiSmallMarginTop"/>
-                </VBox>
+                <HBox alignItems="Center">
+                    <ObjectNumber number="199" unit="₹" emphasized="true"/>
+                </HBox>
+                <Button text="ADD TO CART" press="onPressAddToCart" class="sapUiSmallMarginTop"/>
+            </VBox>
 
-                <!-- Gym Bags -->
-                <VBox width="300px" class="sapUiSmallMargin">
-                    <Carousel height="200px" width="100%">
-                        <Image src="img/Gymbags.jpg" />
-                        <Image src="img/Gymbags1.jpg" />
-                    </Carousel>
+            <!-- Gym Bags -->
+            <VBox width="300px" class="sapUiSmallMargin gympagebox">
+                <Carousel height="200px" width="100%">
+                    <Image src="img/Gymbags.jpg" />
+                    <Image src="img/Gymbags1.jpg" />
+                </Carousel>
 
-                    <HBox justifyContent="SpaceBetween">
-                        <ObjectStatus text="4.8" icon="sap-icon://favorite" state="Success"/>
-                        <Button icon="sap-icon://heart" type="Transparent" press="onPressWishlist"/>
-                    </HBox>
+                <HBox justifyContent="SpaceBetween">
+                    <ObjectStatus text="4.8" icon="sap-icon://favorite" state="Success"/>
+                    <Button icon="sap-icon://heart-2" type="Transparent" press="onPressWishlist"/>
+                </HBox>
 
-                    <Text text="Gym Bags" />
-                    <Text text="Spacious and stylish Gym Bag" maxLines="2" wrapping="true" />
+                <Text text="Gym Bags" />
+                <Text text="Spacious and stylish Gym Bag" />
 
-                    <HBox alignItems="Center">
-                        <ObjectNumber number="1299" unit="₹" emphasized="true"/>
-                    </HBox>
-                    <Button text="ADD TO CART" type="Emphasized" 
-                            press="onPressAddToCart" class="sapUiSmallMarginTop"/>
-                </VBox>
+                <HBox alignItems="Center">
+                    <ObjectNumber number="1299" unit="₹" emphasized="true"/>
+                </HBox>
+                <Button text="ADD TO CART" press="onPressAddToCart" class="sapUiSmallMarginTop"/>
+            </VBox>
 
-            </FlexBox>
-        </ScrollContainer>
+             <!-- Dumbbells -->
+            <VBox width="300px" class="sapUiSmallMargin gympagebox">
+                <Carousel height="200px" width="100%">
+                    <Image src="img/dumbbells1.jpg" />
+                    <Image src="img/dumbbells2.jpg" />
+                </Carousel>
+
+                <HBox justifyContent="SpaceBetween">
+                    <ObjectStatus text="4.6" icon="sap-icon://favorite" state="Success"/>
+                    <Button icon="sap-icon://heart-2" type="Transparent" press="onPressWishlist"/>
+                </HBox>
+
+                <Text text="Dumbbells" />
+                <Text text="Best selling Dumbbells with Rack" maxLines="2" wrapping="true" />
+
+                <HBox alignItems="Center">
+                    <ObjectNumber number="2499" unit="₹" emphasized="true"/>
+                </HBox>
+                <Button text="ADD TO CART" press="onPressAddToCart" class="sapUiSmallMarginTop"/>
+            </VBox>
+        </FlexBox>
+    </ScrollContainer>
+</l:Splitter>
     </Page>
 </mvc:View>

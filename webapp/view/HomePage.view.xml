@@ -14,7 +14,7 @@
 		</items>
 	</IconTabHeader>
     <Carousel id="sportsCarousel" height="400px" width="100%" >
-                <ScrollContainer horizontal="true" vertical="false" height="350px">
+                <ScrollContainer horizontal="true" vertical="false" height="550px" class="hpscroll">
     <HBox items="">
        
         <VBox class="sapUiSmallMargin" >
@@ -54,13 +54,17 @@
         </VBox>
     </HBox>  
 </ScrollContainer>
+</Carousel>
 
-</Carousel>
-		<Carousel class="sapUiContentPadding" loop="true"   >
-		<Image src="https://techstory.in/wp-content/uploads/2023/03/img_1677729658049_390.jpg" width="90%"  />
-		<Image src="https://media.sudouest.fr/12564735/1200x-1/decathlon.jpg"   width="100%" />
-		<Image src="https://www.theindianwire.com/wp-content/uploads/2019/04/bneGeneric-bneCompany-retail-store-shop-decathlon-169.jpg" width="100%" />
-		<Image src="https://www.joonsquare.com/usermanage/image/business/decathlon-zirakpur-mohali-63848/decathlon-zirakpur-mohali-decathlon-4.jpg" alt="" width="100%" />
-</Carousel>
+		<!-- <Carousel class="sapUiContentPadding" loop="true" height="70%" >
+
+		<Image src="img/HP1.jpg"  />
+		<Image src="img/HP2.jpg"  />
+		<Image src="img/HP3.jpg"  />
+		<Image src="img/HP4.jpg"  />
+        <Image src="img/HP5.jpg"  />
+        <Image src="img/HP6.jpg"  />
+</Carousel> -->
+
 </Page>
 </mvc:View>

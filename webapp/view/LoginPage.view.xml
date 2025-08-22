@@ -12,30 +12,25 @@
 		<items  >        
 			<IconTabFilter key="signin" text="Signin"  />
 			<IconTabFilter key="signup" text="signup" />
-		</items>
-        
+		</items>        
 	</IconTabHeader>
 </VBox>
     <!-- signin  -->
      <VBox id="signinForm" >
                     <l:VerticalLayout class="sapUiContentPadding" width="100%">
-                        <!-- <Title text="Signin" class="titleText" /> -->
                         <Label text="Email:" class="label" />
                         <Input id="signinEmail" type="Email" placeholder="Enter email" width="100%" />
                         
                         <Label text="Password:" class="label" />
                         <Input id="signinPassword" type="Password" placeholder="Enter password" width="100%" />
                         
-                        <Button text="Login" press="onPressSignin" class="loginButton" />
-                        
+                        <Button text="Login" press="onPressSignin" class="loginButton" />  
                     </l:VerticalLayout>
-                </VBox>
+    </VBox>
 
                 <!-- signup  -->
-
                  <VBox id="signupForm" visible="false">
                     <l:VerticalLayout class="sapUiContentPadding" width="100%">
-                        <!-- <Title text="Sign up" class="titleText" /> -->
                         <Label text="Full Name:" class="label" />
                         <Input id="signupName" placeholder="Enter full name" width="100%" />
                         

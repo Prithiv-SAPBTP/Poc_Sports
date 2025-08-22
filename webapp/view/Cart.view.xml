@@ -1,72 +1,9 @@
 <mvc:View controllerName="decathlon.controller.Cart"
     xmlns:mvc="sap.ui.core.mvc"
     xmlns="sap.m"
-	xmlns:f="sap.f"
-	xmlns:form="sap.ui.layout.form"
-	xmlns:layout="sap.ui.layout"
-	height="100%" >
+    xmlns:l="sap.ui.layout">
   
+    <Page title="{i18n>title}" class="img" enableScrolling="false" >
 
-    <VBox>
-        <Title text="Items in Cart" level="H3" class="sapUiSmallMarginBottom"/>
-        
-        <!-- Cart List -->
-        <List
-            id="cartList"
-            items="{
-                path: 'cart>/items'
-            }"
-            mode="Delete"
-            delete=".onDeleteItem">
-
-            <CustomListItem>
-                <HBox class="sapUiSmallMargin sapUiSmallMarginBottom">
-                    
-                    <!-- Checkbox -->
-                    <CheckBox selected="{cart>selected}" class="sapUiSmallMarginEnd"/>
-
-                    <!-- Product Image -->
-                    <Image src="{cart>image}" width="100px" height="100px" class="sapUiSmallMarginEnd"/>
-
-                    <!-- Product Details -->
-                    <VBox class="sapUiSmallMarginEnd" width="60%">
-                        <Text text="{cart>brand}" design="Bold"/>
-                        <Text text="{cart>name}" wrapping="true"/>
-                        <Text text="Ref: {cart>ref}" class="sapUiTinyMarginTop"/>
-                        
-                        <!-- Quantity + Price Row -->
-                        <HBox class="sapUiTinyMarginTop">
-                            <Label text="Qty:" class="sapUiTinyMarginEnd"/>
-                            <StepInput
-                                value="{cart>quantity}"
-                                min="1"
-                                max="10"
-                                change=".onQuantityChange"
-                                width="80px"/>
-                        </HBox>
-                        
-                        <!-- Price + Discount -->
-                        <HBox class="sapUiTinyMarginTop">
-                            <ObjectNumber
-                                number="{cart>price}"
-                                unit="₹"
-                                emphasized="true"/>
-                            <ObjectNumber
-                                number="{cart>mrp}"
-                                unit="₹"
-                                state="Error"
-                                class="sapUiTinyMarginBegin"
-                                textAlign="End"/>
-                            <Text text="{cart>discount}% Off" class="sapUiTinyMarginBegin" />
-                        </HBox>
-
-                        <!-- Delivery Date -->
-                        <Text text="Delivery by {cart>delivery}" class="sapUiTinyMarginTop"/>
-                    </VBox>
-
-                </HBox>
-            </CustomListItem>
-        </List>
-    </VBox>
-    
+    </Page>
     </mvc:View>
