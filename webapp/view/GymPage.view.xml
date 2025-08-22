@@ -29,19 +29,54 @@
         	<l:Splitter height="100%" width="100%">
     <!-- Left Side: Category List -->
     <VBox width="100%">
-        <List id="categoryList" mode="SingleSelectMaster">
+        <List mode="SingleSelectMaster">
             <items>
-                <StandardListItem class="categoryList1" title="Dumbells" />
-                <StandardListItem class="categoryList1" title="Iron weighted plates" />
-                <StandardListItem class="categoryList1" title="Rubber weighted plates" />
-                <StandardListItem class="categoryList1" title="Kettlebells" />
-                <StandardListItem class="categoryList1" title="Smith Machine" />
-                <StandardListItem class="categoryList1" title="Leg Press Machine" />
-                <StandardListItem class="categoryList1" title="Chest Press Machine" />
-                <StandardListItem class="categoryList1" title="Lat Pulldown Machine" />
-                <StandardListItem class="categoryList1" title="Cable Crossover Machine" />
+                <StandardListItem  title="Dumbells" />
+                <StandardListItem  title="Iron weighted plates" />
+                <StandardListItem  title="Rubber weighted plates" />
+                <StandardListItem  title="Kettlebells" />
+                <StandardListItem  title="Smith Machine" />
+                <StandardListItem  title="Leg Press Machine" />
+                <StandardListItem  title="Chest Press Machine" />
+                <StandardListItem  title="Lat Pulldown Machine" />
+                <StandardListItem  title="Cable Crossover Machine" />
             </items>
         </List>
+        <VBox class="sapUiSmallMargin">
+ 
+<Title text="Price" level="H5" />
+<HBox>
+<Input value="799" width="100px" />
+<Text text=" To " class="sapUiSmallMarginBeginEnd"/>
+<Input  value="9999" width="100px" />
+</HBox>
+<Slider   min="799" max="9999" />
+
+<Title text="Category" level="H5" class="sapUiSmallMarginTop"/>
+<SearchField placeholder="Search..." width="100%"/>
+<VBox>
+<CheckBox text="Dumbells" />
+<CheckBox text="Kettlebells" />
+<CheckBox text="Barbells" />
+</VBox>
+
+<Title text="Size" level="H5" class="sapUiSmallMarginTop"/>
+<SearchField placeholder="Search size..." width="100%"/>
+<ScrollContainer height="200px" vertical="true">
+<VBox>
+<CheckBox text="5 kg" />
+<CheckBox text="7.5 kg" />
+<CheckBox text="10 kg" />
+<CheckBox text="12.5 kg" />
+<CheckBox text="15 kg" />
+<CheckBox text="20 kg" />
+<CheckBox text="25 kg" />
+<CheckBox text="30 kg" />
+<CheckBox text="35 kg" />
+<CheckBox text="40 kg" />
+</VBox>
+</ScrollContainer>
+            </VBox>
         <layoutData>
             <l:SplitterLayoutData size="20%" />
         </layoutData>

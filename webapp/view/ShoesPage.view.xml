@@ -1,0 +1,156 @@
+<mvc:View controllerName="decathlon.controller.ShoesPage"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:core="sap.ui.core"
+    xmlns="sap.m"
+    xmlns:l="sap.ui.layout"
+    xmlns:tnt="sap.tnt"
+	height="100%"
+	class="side-navigation-demo">
+    
+    <Page  title="Gym and Fitness" showHeader="false" enableScrolling="true">
+        <mvc:XMLView viewName="decathlon.view.TitleBar"/>
+        	<l:Splitter height="100%" width="100%">
+
+    <VBox width="100%">
+        <List id="categoryList" mode="SingleSelectMaster">
+            <items>
+                <StandardListItem  title="Running Shoes" />
+                <StandardListItem  title="Gym Shoes" />
+                <StandardListItem  title="Trekking Shoes" />
+                <StandardListItem  title="Walking Shoes" />
+                <StandardListItem  title="Hikking Shoes" />
+                <StandardListItem  title="Water Proof Shoes" />
+                <StandardListItem  title="Sandels" />
+                <StandardListItem  title="Socks" />
+                <StandardListItem  title="Flip Flops" />
+            </items>
+        </List>
+
+        <VBox class="sapUiSmallMargin">
+            <Title text="Filters" level="H2" />
+            <Image src="sap-icon://add-filter" ></Image>
+            <Title text="Price" level="H5" />
+        <HBox>
+            <Input id="minPrice" value="799" width="100px"  editable="false"/>
+            <Text text=" To " class="sapUiSmallMarginBeginEnd"/>
+            <Input id="maxPrice" value="9999" width="100px" editable="false"/>
+        </HBox>
+            <Slider  id="priceSlider" min="799" max="9999" />
+ 
+
+        <Title text="Gender" level="H5" class="sapUiSmallMarginTop"/>
+        <VBox>
+            <CheckBox text="Men" />
+            <CheckBox text="Women" />
+        </VBox>
+ 
+        <Title text="Color" level="H5" class="sapUiSmallMarginTop"/>
+        <VBox>
+            <CheckBox text="Black" />
+            <CheckBox text="Blue" />
+            <CheckBox text="Red" />
+            <CheckBox text="White" />
+            <CheckBox text="Orange" />
+            <CheckBox text="Red" />
+        </VBox>
+
+        <Title text="Size" level="H5" class="sapUiSmallMarginTop"/>
+            <SearchField placeholder="Search size..." width="100%"/>
+            <ScrollContainer height="200px" vertical="true">
+            <VBox>
+                <CheckBox text="6" />
+                <CheckBox text="7" />
+                <CheckBox text="8" />
+                <CheckBox text="8.5" />
+                <CheckBox text="9" />
+                <CheckBox text="9.5" />
+                <CheckBox text="10" />
+                <CheckBox text="10.5" />
+                <CheckBox text="11 (29)" />
+            </VBox>
+            </ScrollContainer>
+            </VBox>
+
+        <layoutData>
+            <l:SplitterLayoutData size="20%" />
+        </layoutData>
+    </VBox>
+
+    <ScrollContainer width="100%" height="100%" vertical="true" horizontal="false" class="container">
+        <layoutData>
+            <l:SplitterLayoutData size="80%" />
+        </layoutData>
+
+        <FlexBox wrap="Wrap" justifyContent="SpaceAround">
+            <!-- Running Shoes -->
+            <VBox width="300px" class="sapUiSmallMargin gympagebox">
+                <Carousel height="200px" width="100%">
+                    <Image src="img/Shoe1.jpg" class="SPimg" />
+                    <Image src="img/Shoe2.jpg" class="SPimg"/>
+                    <Image src="img/Shoe3.jpg" class="SPimg"/>
+                </Carousel>
+
+                <HBox justifyContent="SpaceBetween">
+                    <ObjectStatus text="4.6" icon="sap-icon://favorite" state="Success"/>
+                    <Button icon="sap-icon://heart-2" type="Transparent" press="onPressWishlist"/>
+                </HBox>
+
+                <Text text="Running Shoes" />
+                <Text text="Most comfortable Running Shoes"  />
+
+                <HBox alignItems="Center">
+                    <ObjectNumber number="2499" unit="₹" emphasized="true"/>
+                </HBox>
+                <Button text="ADD TO CART" press="onPressAddToCart" class="sapUiSmallMarginTop"/>
+            </VBox>
+
+            <!-- Walking Shoes -->
+            <VBox width="300px" class="sapUiSmallMargin gympagebox">
+                <Carousel height="200px" width="100%">
+                    <Image src="img/shoe4.jpg" class="SPimg"/>
+                    <Image src="img/Shoe5.jpg" class="SPimg"/>
+                    <Image src="img/Shoe6.jpg" class="SPimg"/>
+                </Carousel>
+
+                <HBox justifyContent="SpaceBetween">
+                    <ObjectStatus text="4.2" icon="sap-icon://favorite" state="Success"/>
+                    <Button icon="sap-icon://heart-2" type="Transparent" press="onPressWishlist"/>
+                </HBox>
+
+                <Text text="Walking Shoes" />
+                <Text text="Premium Quality Walking Shoes"/>
+
+                <HBox alignItems="Center">
+                    <ObjectNumber number="1999" unit="₹" emphasized="true"/>
+                </HBox>
+                <Button text="ADD TO CART" press="onPressAddToCart" class="sapUiSmallMarginTop"/>
+            </VBox>
+
+             <!-- Hikking shoes -->
+            <VBox width="300px" class="sapUiSmallMargin gympagebox">
+                <Carousel height="200px" width="100%">
+                    <Image src="img/Shoe7.jpg" class="SPimg"/>
+                    <Image src="img/Shoe8.jpg" class="SPimg"/>
+                    <!-- <Image src="img/Shoe6.jpg" class="SPimg"/> -->
+                </Carousel>
+
+                <HBox justifyContent="SpaceBetween">
+                    <ObjectStatus text="4.2" icon="sap-icon://favorite" state="Success"/>
+                    <Button icon="sap-icon://heart-2" type="Transparent" press="onPressWishlist"/>
+                </HBox>
+
+                <Text text="Hikking shoes" />
+                <Text text="High quality Hikking shoes"/>
+
+                <HBox alignItems="Center">
+                    <ObjectNumber number="3199" unit="₹" emphasized="true"/>
+                </HBox>
+                <Button text="ADD TO CART" press="onPressAddToCart" class="sapUiSmallMarginTop"/>
+            </VBox>
+
+            
+        </FlexBox>
+    </ScrollContainer>
+</l:Splitter>
+    </Page>
+</mvc:View>

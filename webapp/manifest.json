@@ -107,6 +107,13 @@
           "target": [
             "Addtocart"
           ]
+        },
+        {
+          "name": "ShoesPage",
+          "pattern": "ShoesPage",
+          "target": [
+            "Shoes"
+          ]
         }
       ],
       "targets": {
@@ -129,6 +136,10 @@
         "Addtocart":{
           "id": "Cart",
           "name": "Cart"
+        },
+        "Shoes":{
+           "id": "ShoesPage",
+          "name": "ShoesPage"
         }
       }
     },

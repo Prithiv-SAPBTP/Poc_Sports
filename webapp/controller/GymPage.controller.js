@@ -14,15 +14,9 @@ sap.ui.define([
     sap.ui.getCore().setModel(oCountModel, "countModel"); 
         },
         onPressWishlist:function(){
-            var oModel = sap.ui.getCore().getModel("countModel");
-            var iCount = oModel.getProperty("/wishlistCount");
-            oModel.setProperty("/wishlistCount", iCount + 1);
             MessageToast.show("Added to Wishlist");
         },
         onPressAddToCart:function(){
-            var oModel = sap.ui.getCore().getModel("countModel");
-            var iCount = oModel.getProperty("/cartCount");
-            oModel.setProperty("/cartCount", iCount + 1);
             MessageToast.show("Added to your Cart...!!")
         },
 
