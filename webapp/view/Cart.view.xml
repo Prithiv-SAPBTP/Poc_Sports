@@ -4,6 +4,34 @@
     xmlns:l="sap.ui.layout">
   
     <Page>
+   <content>
+            <List items="{cart>/items}" >
+                <CustomListItem>
+                    <HBox justifyContent="SpaceBetween" width="70%">  
+        <Carousel height="200px" width="100%">
+            <Image src="{cart>images/0}" class="SPimg"/>
+            <Image src="{cart>images/1}" class="SPimg"/>
+        </Carousel>
 
+  
+             <VBox class="sapUiSmallMarginBegin">
+                <Text text="{cart>name}" />
+                <Text text="{cart>description}" />
+
+               <HBox class="sapUiSmallMarginTop" alignItems="Center">
+                    <Button icon="sap-icon://less" press="onDecreaseQuantity" />
+                    <Text text="{cart>quantity}" class="sapUiTinyMarginBegin sapUiTinyMarginEnd"/>
+                    <Button icon="sap-icon://add" press="onIncreaseQuantity" />
+                    <Button icon="sap-icon://delete" press="onRemoveFromCart" class="sapUiTinyMarginBegin"/>
+               </HBox>
+            </VBox>
+
+            <VBox alignItems="End">
+               <ObjectNumber  number="{= ${cart>price} * ${cart>quantity} }"  unit="{cart>currency}"/>
+             </VBox>
+           </HBox>
+        </CustomListItem>
+            </List>
+        </content>
     </Page>
     </mvc:View>

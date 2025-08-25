@@ -7,7 +7,7 @@
 	height="100%"
 	class="side-navigation-demo">
     
-    <Page  title="Gym and Fitness" showHeader="false" enableScrolling="true">
+    <Page  title="Gym and Fitness" showHeader="false" enableScrolling="false">
         <mvc:XMLView viewName="decathlon.view.TitleBar"/>
         	<l:Splitter height="100%" width="100%">
 
@@ -76,81 +76,36 @@
         </layoutData>
     </VBox>
 
-    <ScrollContainer width="100%" height="100%" vertical="true" horizontal="false" class="container">
+    <!-- <ScrollContainer width="100%" height="100%" vertical="true" class="container"> -->
+    <VBox  >
         <layoutData>
             <l:SplitterLayoutData size="80%" />
         </layoutData>
 
-        <FlexBox wrap="Wrap" justifyContent="SpaceAround">
-            <!-- Running Shoes -->
-            <VBox width="300px" class="sapUiSmallMargin gympagebox">
-                <Carousel height="200px" width="100%">
-                    <Image src="img/Shoe1.jpg" class="SPimg" />
-                    <Image src="img/Shoe2.jpg" class="SPimg"/>
-                    <Image src="img/Shoe3.jpg" class="SPimg"/>
-                </Carousel>
+       <FlexBox justifyContent="SpaceAround" items="{products>/items}">
+    <VBox width="300px" class="sapUiSmallMargin gympagebox">
 
-                <HBox justifyContent="SpaceBetween">
-                    <ObjectStatus text="4.6" icon="sap-icon://favorite" state="Success"/>
-                    <Button icon="sap-icon://heart-2" type="Transparent" press="onPressWishlist"  />
-                </HBox>
+        <Carousel height="200px" width="100%" pages="{products>images}">
+            <Image src="{products>}" class="SPimg"/>
+        </Carousel>
 
-                <Text text="Running Shoes" />
-                <Text text="Most comfortable Running Shoes"  />
+        <HBox justifyContent="SpaceBetween">
+            <ObjectStatus text="{products>rating}" icon="sap-icon://favorite" state="Success"/>
+            <Button icon="sap-icon://heart-2" type="Transparent" press="onPressWishlist"/>
+        </HBox>
 
-                <HBox alignItems="Center">
-                    <ObjectNumber number="2499" unit="₹" emphasized="true"/>
-                </HBox>
-                <Button text="ADD TO CART" press="onPressAddToCart" class="sapUiSmallMarginTop"/>
-            </VBox>
+        <Text text="{products>name}" />
+        <Text text="{products>description}" />
 
-            <!-- Walking Shoes -->
-            <VBox width="300px" class="sapUiSmallMargin gympagebox">
-                <Carousel height="200px" width="100%">
-                    <Image src="img/shoe4.jpg" class="SPimg"/>
-                    <Image src="img/Shoe5.jpg" class="SPimg"/>
-                    <Image src="img/Shoe6.jpg" class="SPimg"/>
-                </Carousel>
+        <HBox alignItems="Center">
+            <ObjectNumber number="{products>price}" unit="{products>currency}"/>
+        </HBox>
+        <Button text="ADD TO CART" press="onPressAddToCart" class="sapUiSmallMarginTop"/>
+    </VBox>
+</FlexBox>
 
-                <HBox justifyContent="SpaceBetween">
-                    <ObjectStatus text="4.2" icon="sap-icon://favorite" state="Success"/>
-                    <Button icon="sap-icon://heart-2" type="Transparent" press="onPressWishlist"/>
-                </HBox>
-
-                <Text text="Walking Shoes" />
-                <Text text="Premium Quality Walking Shoes"/>
-
-                <HBox alignItems="Center">
-                    <ObjectNumber number="1999" unit="₹" emphasized="true"/>
-                </HBox>
-                <Button text="ADD TO CART" press="onPressAddToCart" class="sapUiSmallMarginTop"/>
-            </VBox>
-
-             <!-- Hikking shoes -->
-            <VBox width="300px" class="sapUiSmallMargin gympagebox">
-                <Carousel height="200px" width="100%">
-                    <Image src="img/Shoe7.jpg" class="SPimg"/>
-                    <Image src="img/Shoe8.jpg" class="SPimg"/>
-                    <!-- <Image src="img/Shoe6.jpg" class="SPimg"/> -->
-                </Carousel>
-
-                <HBox justifyContent="SpaceBetween">
-                    <ObjectStatus text="4.2" icon="sap-icon://favorite" state="Success"/>
-                    <Button icon="sap-icon://heart-2" type="Transparent" press="onPressWishlist"/>
-                </HBox>
-
-                <Text text="Hikking shoes" />
-                <Text text="High Quality Hikking shoes"/>
-
-                <HBox alignItems="Center">
-                    <ObjectNumber number="3199" unit="₹" emphasized="true"/>
-                </HBox>
-                <Button text="ADD TO CART" press="onPressAddToCart" class="sapUiSmallMarginTop"/>
-            </VBox>
-
-            
-        </FlexBox>
-    </ScrollContainer>
+        </VBox>
+    <!-- </ScrollContainer> -->
 </l:Splitter>
     </Page>
 </mvc:View>

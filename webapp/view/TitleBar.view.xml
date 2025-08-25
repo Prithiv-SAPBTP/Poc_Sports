@@ -12,9 +12,9 @@
               </contentLeft>
  
               <contentRight>
-                <Button icon="sap-icon://question-mark" tooltip="Help" type="Transparent" press="onPressHelp" />
-                 <Button icon="sap-icon://heart-2" tooltip="Wishlist" type="Transparent" press="onPressWishlist" /> 
-                <Button icon="sap-icon://cart" tooltip="Cart" press="onPressCart" />
+                <Button icon="sap-icon://question-mark" tooltip="Help" press="onPressHelp" />
+                <Button icon="sap-icon://heart-2" tooltip="Wishlist" press="onPressWishlist" /> 
+                <Button icon="sap-icon://cart"  tooltip="Cart" press="onPressCart"/>                       
               </contentRight>
             </Bar>          
          
