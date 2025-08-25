@@ -1,0 +1,45 @@
+{
+  "items": [
+    {
+      "id": "P001",
+      "name": "Running Shoes",
+      "description": "Most comfortable Running Shoes",
+      "price": 2499,
+      "currency": "₹",
+      "rating": 4.6,
+      "images": [
+        "img/Shoe1.jpg",
+        "img/Shoe2.jpg",
+        "img/Shoe3.jpg"
+      ],
+      "quantity": 0
+    },
+    {
+      "id": "P002",
+      "name": "Walking Shoes",
+      "description": "Premium Quality Walking Shoes",
+      "price": 1999,
+      "currency": "₹",
+      "rating": 4.2,
+      "images": [
+        "img/shoe4.jpg",
+        "img/Shoe5.jpg",
+        "img/Shoe6.jpg"
+      ],
+      "quantity": 0
+    },
+    {
+      "id": "P003",
+      "name": "Hikking Shoes",
+      "description": "High Quality Hikking shoes",
+      "price": 3199,
+      "currency": "₹",
+      "rating": 4.2,
+      "images": [
+        "img/Shoe7.jpg",
+        "img/Shoe8.jpg"
+      ],
+      "quantity": 0
+    }
+  ]
+}

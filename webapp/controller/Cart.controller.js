@@ -6,6 +6,7 @@ sap.ui.define([
 
     return Controller.extend("decathlon.controller.Cart", {
         onInit() {
+            
         },
     });
 });

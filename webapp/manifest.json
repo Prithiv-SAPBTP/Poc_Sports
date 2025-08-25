@@ -51,6 +51,10 @@
         "settings": {
           "bundleName": "decathlon.i18n.i18n"
         }
+      },
+      "cart": {
+        "type": "sap.ui.model.json.JSONModel",
+        "uri": "model/cart.json"
       }
     },
     "resources": {

@@ -92,7 +92,7 @@
 
                 <HBox justifyContent="SpaceBetween">
                     <ObjectStatus text="4.6" icon="sap-icon://favorite" state="Success"/>
-                    <Button icon="sap-icon://heart-2" type="Transparent" press="onPressWishlist"/>
+                    <Button icon="sap-icon://heart-2" type="Transparent" press="onPressWishlist"  />
                 </HBox>
 
                 <Text text="Running Shoes" />
@@ -140,7 +140,7 @@
                 </HBox>
 
                 <Text text="Hikking shoes" />
-                <Text text="High quality Hikking shoes"/>
+                <Text text="High Quality Hikking shoes"/>
 
                 <HBox alignItems="Center">
                     <ObjectNumber number="3199" unit="₹" emphasized="true"/>
