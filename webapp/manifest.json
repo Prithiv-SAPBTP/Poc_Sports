@@ -118,6 +118,13 @@
           "target": [
             "Shoes"
           ]
+        },
+         {
+          "name": "Purchase",
+          "pattern": "Purchase",
+          "target": [
+            "PurchaseOrder"
+          ]
         }
       ],
       "targets": {
@@ -142,10 +149,15 @@
           "name": "Cart"
         },
         "Shoes":{
-           "id": "ShoesPage",
+          "id": "ShoesPage",
           "name": "ShoesPage"
+        },
+        "PurchaseOrder":{
+          "id": "Purchase",
+          "name": "Purchase"
         }
-      }
+        }
+      
     },
     "rootView": {
       "viewName": "decathlon.view.App",

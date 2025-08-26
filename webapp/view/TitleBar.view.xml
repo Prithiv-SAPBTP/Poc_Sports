@@ -1,10 +1,11 @@
 <mvc:View controllerName="decathlon.controller.TitleBar"
     xmlns:mvc="sap.ui.core.mvc"
-    xmlns="sap.m">
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core">
 
   <Bar class="bar" design="Header">
               <contentLeft>
-                <Image  src="../img/logo1.webp" class="image1"/>
+                <Image  src="../img/lt_logo.webp" class="image1"/>
               </contentLeft>
  
               <contentLeft>
@@ -12,7 +13,13 @@
               </contentLeft>
  
               <contentRight>
-                <Button icon="sap-icon://question-mark" tooltip="Help" press="onPressHelp" />
+                <Button icon="sap-icon://question-mark" tooltip="Help" press="onPressHelp" >
+                <dependents>
+			<core:Fragment
+				fragmentName="decathlon.view.Help"
+				type="XML" />
+		</dependents>
+    </Button>
                 <Button icon="sap-icon://heart-2" tooltip="Wishlist" press="onPressWishlist" /> 
                 <Button icon="sap-icon://cart"  tooltip="Cart" press="onPressCart"/>                       
               </contentRight>

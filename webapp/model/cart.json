@@ -12,7 +12,7 @@
         "img/Shoe2.jpg",
         "img/Shoe3.jpg"
       ],
-      "quantity": 0
+      "quantity": 1
     },
     {
       "id": "P002",
@@ -26,7 +26,7 @@
         "img/Shoe5.jpg",
         "img/Shoe6.jpg"
       ],
-      "quantity": 0
+      "quantity": 1
     },
     {
       "id": "P003",
@@ -39,7 +39,7 @@
         "img/Shoe7.jpg",
         "img/Shoe8.jpg"
       ],
-      "quantity": 0
+      "quantity": 1
     }
   ]
 }

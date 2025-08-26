@@ -5,9 +5,9 @@
   
     <Page>
    <content>
-            <List items="{cart>/items}" >
-                <CustomListItem>
-                    <HBox justifyContent="SpaceBetween" width="70%">  
+            <List items="{cart>/items}" width="100%">
+                <CustomListItem >
+                    <HBox justifyContent="SpaceBetween" alignItems="Center" width="80%" >  
         <Carousel height="200px" width="100%">
             <Image src="{cart>images/0}" class="SPimg"/>
             <Image src="{cart>images/1}" class="SPimg"/>

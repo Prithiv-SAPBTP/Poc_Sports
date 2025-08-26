@@ -1,0 +1,32 @@
+<ActionSheet id="actionSheet"
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core"
+	core:require="{ MessageToast: 'sap/m/MessageToast' }"
+	title="Choose Your Action"
+	showCancelButton="true"
+	placement="Bottom">
+	<Button
+		text="Return and Refund"
+		icon="sap-icon://share"
+		press="MessageToast.show('Selected action is ' + ${$source>/text})" />
+	<Button
+		text="Shipping and Delivery"
+		icon="sap-icon://shipping-status"
+		press="MessageToast.show('Selected action is ' + ${$source>/text})" />
+	<Button
+		text="Replacement"
+		icon="sap-icon://collections-management"
+		press="MessageToast.show('Selected action is ' + ${$source>/text})" />
+	<Button
+		text="Payment Method"
+		icon="sap-icon://money-bills"
+		press="MessageToast.show('Selected action is ' + ${$source>/text})" />
+	<Button
+		text="Store"
+		icon="sap-icon://retail-store"
+		press="MessageToast.show('Selected action is ' + ${$source>/text})" />
+	<Button
+		text="My Account"
+        icon="sap-icon://account"
+		press="MessageToast.show('Selected action is ' + ${$source>/text})" />
+</ActionSheet>

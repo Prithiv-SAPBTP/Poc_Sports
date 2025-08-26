@@ -1,0 +1,163 @@
+<mvc:View
+    controllerName="decathlon.controller.Purchase"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:l="sap.ui.layout"
+    xmlns:f="sap.ui.layout.form"
+    xmlns:core="sap.ui.core">
+
+    <Page id="createPage" title="Create New Purchase Order">
+
+        <mvc:XMLView viewName="decathlon.view.TitleBar" />
+
+        <!-- <Toolbar class="toolbarBuutons sapUiSmallMarginBottom">
+            <Button text="INFO" type="Default" press="onInfoPress"/>
+            <Button text="SEQ" type="Default" press="onSeqPress"/>
+        </Toolbar> -->
+
+        <HBox class="poHbox">
+
+            <VBox class="sapUiSmallMarginEnd" width="30%"  >
+                <Label text="Purchase Type :" />
+                <Select id="purchaseType" width="250px">
+                    <items></items>
+                </Select>
+                
+
+                <Label text="Ship To Party :"/>
+                <Input id="shipToParty" placeholder="Select Ship To Party" width="250px"/>
+
+                <Label text="Address :"/>
+                <Input id="address" width="250px"/>
+            </VBox>
+
+  
+            <VBox class="sapUiSmallMarginEnd" width="30%">
+                <Label text="Payment Type :"/>
+                <Select id="paymentType" width="250px">
+                    <items></items>
+                </Select>
+
+                <Label text="Dealer Ref No :"/>
+                <Input id="dealerRefNo" placeholder="Enter Dealer Ref No." width="250px"/>
+
+                <Label text="PO Ref Date :"/>
+                <DatePicker id="poRefDate" width="250px"/>
+            </VBox>
+
+            <VBox class="sapUiSmallMarginEnd">
+                <Label text="Credit Limit :"/>
+                <Text id="creditLimit" text="0.00" width="250px"/>
+
+                <Label text="Current Order :"/>
+                <Text id="currentOrder" text="0.00" width="250px"/>
+
+                <Label text="Enable Unit Price :"/>
+                <Switch id="enableUnitPrice" state="false" change="onEnableUnitPriceChange"/>
+
+                <Label text="Balance Credit :"/>
+                <Text id="balanceCredit" text="0.00" width="250px"/>
+            </VBox>
+
+
+            <VBox id="vbox4" visible="true" class="sapUiSmallMarginEnd">
+
+         
+                <Label text="Total Order Quantity :"/>
+                <Text id="totalOrderQty" text="0" width="250px"/>
+
+                <VBox id="vbox4Extra" visible="false">
+                    <Label text="VAT Amount :"/>
+                    <Text id="vatAmount" text="0.00" width="250px"/>
+
+                    <Label text="Total Amount Excluding VAT :"/>
+                    <Text id="amountExclVAT" text="0.00" width="250px"/>
+
+                    <Label text="Total Amount Including VAT :"/>
+                    <Text id="amountInclVAT" text="0.00" width="250px"/>
+                </VBox>
+            </VBox>
+
+        </HBox>
+
+        
+
+        <!-- <VBox id="seqSection" class="sapUiSmallMarginTop">
+
+    
+            <Toolbar class="tool">
+                <Title text="SEQ" level="H2"/>
+            </Toolbar>
+
+
+            <Toolbar>
+                <RadioButtonGroup columns="2" selectedIndex="0" select=".onRadioSelect">
+                    <buttons>
+                        <RadioButton text="Manual Selection"/>
+                        <RadioButton text="Excel Upload"/>
+                    </buttons>
+                </RadioButtonGroup>
+
+                <HBox id="uploadBox" class="sapUiSmallMargin" visible="false">
+                    <Button icon="sap-icon://upload" text="UPLOAD"/>
+                </HBox>
+            </Toolbar>
+
+
+            <Toolbar>
+                <Title text="Stock Legend" level="H3"/>
+                <ObjectStatus text="Available" state="Success"/>
+                <ObjectStatus text="Limited" state="Warning"/>
+                <ObjectStatus text="Not Available" state="Error"/>
+            </Toolbar>
+
+ 
+            <Table
+                inset="false"
+                growing="true"
+                growingScrollToLoad="true"
+                items="{ path: 'itemsModel>/items' }">
+
+                <headerToolbar>
+                    <Toolbar>
+                        <Title text="Items" level="H3"/>
+                        <ToolbarSpacer/>
+                        <Button text="Add Item" type="Emphasized" icon="sap-icon://add" press="onAddItem"/>
+                    </Toolbar>
+                </headerToolbar>
+
+                <columns>
+                    <Column><Text text="Seq"/></Column>
+                    <Column><Text text="Material"/></Column>
+                    <Column><Text text="Quantity"/></Column>
+                    <Column><Text text="In Stock"/></Column>
+                    <Column><Text text="ETA"/></Column>
+                    <Column><Text text="MSRP"/></Column>
+                </columns>
+
+                <items>
+                    <ColumnListItem>
+                        <cells>
+                            <Input value="{itemsModel>seq}" type="Number" placeholder="0"/>
+                            <Input value="{itemsModel>material}" placeholder="Enter Material"/>
+                            <Input value="{itemsModel>quantity}" type="Number" placeholder="0"/>
+                            <ObjectStatus state="{itemsModel>stockState}" text="{itemsModel>stockStatus}"/>
+                            <Text text="{itemsModel>eta}"/>
+                            <Text text="{itemsModel>msrp}"/>
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+
+        </VBox> -->
+
+        <footer>
+            <Toolbar>
+                <ToolbarSpacer/>
+                <Button text="Delete" type="Reject" icon="sap-icon://delete"/>
+                <Button text="Save" type="Accept" icon="sap-icon://accept"/>
+            </Toolbar>
+        </footer>
+
+    </Page>
+</mvc:View>

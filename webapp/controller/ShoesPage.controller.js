@@ -32,7 +32,7 @@ sap.ui.define([
         onPressAddToCart:function(oEvent){
             var oView = this.getView();
             var oCartModel = oView.getModel("cart");
-            var aCartItems = oCartModel.getProperty("/items");
+            // var aCartItems = oCartModel.getProperty("/items");
 
             var oButton = oEvent.getSource();
             var oProductContext = oButton.getBindingContext("products");

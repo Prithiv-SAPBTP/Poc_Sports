@@ -24,10 +24,13 @@ sap.ui.define([
             // } else {
             //     this.byId("cartDialog").open();
             // }
-            
-        },
-        // onCloseCart: function () {
+            // onCloseCart: function () {
         //     this.byId("cartDialog").close();
-        // }
+        // } 
+        },
+       onPressHelp: function(oEvent){
+        var oButton = oEvent.getSource();
+		this.byId("actionSheet").openBy(oButton);
+       }
     });
 });
