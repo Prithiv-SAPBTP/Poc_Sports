@@ -45,6 +45,7 @@
 }
 
 .bar{
+   /* position: relative; */
   height: 60px !important;
   display: flex;
   align-items: center !important;

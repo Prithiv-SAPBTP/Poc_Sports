@@ -2,8 +2,9 @@
     xmlns:mvc="sap.ui.core.mvc"
     xmlns="sap.m"
    >
-   <Page title="Catalogue" showHeader="false" >
+   
    <mvc:XMLView viewName="decathlon.view.TitleBar"/>
+   <Page title="Catalogue" showHeader="false" >
 
     <VBox fitContainer="true" class="sapUiContentPadding">
 

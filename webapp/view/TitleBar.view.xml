@@ -3,7 +3,7 @@
     xmlns="sap.m"
     xmlns:core="sap.ui.core">
 
-  <Bar class="bar" design="Header">
+  <Bar class="bar" design="Header" >
               <contentLeft>
                 <Image  src="../img/lt_logo.webp" class="image1"/>
               </contentLeft>
@@ -15,11 +15,9 @@
               <contentRight>
                 <Button icon="sap-icon://question-mark" tooltip="Help" press="onPressHelp" >
                 <dependents>
-			<core:Fragment
-				fragmentName="decathlon.view.Help"
-				type="XML" />
-		</dependents>
-    </Button>
+			      <core:Fragment fragmentName="decathlon.view.Help" type="XML" />
+	    	    </dependents>
+            </Button>
                 <Button icon="sap-icon://heart-2" tooltip="Wishlist" press="onPressWishlist" /> 
                 <Button icon="sap-icon://cart"  tooltip="Cart" press="onPressCart"/>                       
               </contentRight>
