@@ -32,6 +32,37 @@
            </HBox>
         </CustomListItem>
             </List>
+
+    <List items="{cart>/Products}" width="100%">
+    <CustomListItem>
+        <HBox justifyContent="SpaceBetween" alignItems="Center" width="100%">
+            
+            <Carousel height="200px" width="300px">
+                    <Image src="{cart>images/0}" class="SPimg"/>
+                    <Image src="{cart>images/1}" class="SPimg"/>
+            </Carousel>
+
+            <VBox class="sapUiSmallMarginBegin">
+                <Text text="{cart>name}" class="sapUiMediumMarginBottom"/>
+                <Text text="{cart>description}" class="sapUiSmallMarginBottom"/>
+
+                <HBox class="sapUiSmallMarginTop" alignItems="Center">
+                    <Button icon="sap-icon://less" press="onDecreaseQuantity" />
+                    <Text text="{cart>quantity}" class="sapUiTinyMarginBegin sapUiTinyMarginEnd"/>
+                    <Button icon="sap-icon://add" press="onIncreaseQuantity" />
+                    <Button icon="sap-icon://delete" press="onRemoveFromCart" class="sapUiTinyMarginBegin"/>
+                </HBox>
+            </VBox>
+
+            <VBox alignItems="End">
+                <ObjectNumber number="{= ${cart>price} * ${cart>quantity}}" unit="{cart>currency}" emphasized="true"/>
+            </VBox>
+
+        </HBox>
+    </CustomListItem>
+</List>
+
+
         </content>
     </Page>
     </mvc:View>

@@ -24,6 +24,9 @@ sap.ui.define([
 
             var oCartModel = new sap.ui.model.json.JSONModel({ items: [] });
             this.setModel(oCartModel, "cart");
+
+            // var oCartModel1 = new sap.ui.model.json.JSONModel({ Products: [] });
+            // this.setModel(oCartModel1, "products");
             
         }
     });

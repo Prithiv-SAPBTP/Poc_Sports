@@ -7,7 +7,7 @@
 	height="100%"
 	class="side-navigation-demo">
     
-    <Page id="page" title="Gym and Fitness" showHeader="false" enableScrolling="true">
+    <Page id="page" title="Gym and Fitness" showHeader="false" enableScrolling="false">
         <mvc:XMLView viewName="decathlon.view.TitleBar"/>
          <!-- <content>
 			<ComboBox>
@@ -50,7 +50,7 @@
 <Text text=" To " class="sapUiSmallMarginBeginEnd"/>
 <Input  value="9999" width="100px" />
 </HBox>
-<Slider   min="799" max="9999" />
+<!-- <Slider   min="799" max="9999" /> -->
 
 <Title text="Category" level="H5" class="sapUiSmallMarginTop"/>
 <SearchField placeholder="Search..." width="100%"/>
@@ -82,97 +82,37 @@
         </layoutData>
     </VBox>
 
-    <ScrollContainer width="100%" height="100%" vertical="true" horizontal="false" class="container">
+    <!-- <ScrollContainer width="100%" height="100%"   class="container" > -->
+    <VBox class="container">
         <layoutData>
             <l:SplitterLayoutData size="80%" />
         </layoutData>
 
-        <FlexBox wrap="Wrap" justifyContent="SpaceAround">
-            <!-- Dumbbells -->
-            <VBox width="300px" class="sapUiSmallMargin gympagebox">
-                <Carousel height="200px" width="100%">
-                    <Image src="img/dumbbells1.jpg" />
-                    <Image src="img/dumbbells2.jpg" />
-                </Carousel>
+       <FlexBox justifyContent="SpaceAround" items="{products>/Products}">
+    <VBox width="300px" class="sapUiSmallMargin gympagebox">
+        <Carousel height="200px" width="100%">
+            <!-- <items> -->
+                <Image src="{products>images/0}" />
+                <Image src="{products>images/1}" />
+            <!-- </items> -->
+        </Carousel>
 
-                <HBox justifyContent="SpaceBetween">
-                    <ObjectStatus text="4.6" icon="sap-icon://favorite" state="Success"/>
-                    <Button icon="sap-icon://heart-2" type="Transparent" press="onPressWishlist"/>
-                </HBox>
+        <HBox justifyContent="SpaceBetween">
+            <ObjectStatus text="{products>rating}" icon="sap-icon://favorite" state="Success"/>
+            <Button icon="sap-icon://heart-2" type="Transparent" press="onPressWishlist"/>
+        </HBox>
 
-                <Text text="Dumbbells" />
-                <Text text="Best selling Dumbbells with Rack" maxLines="2" wrapping="true" />
+        <Text text="{products>name}" />
+        <Text text="{products>description}" maxLines="2" wrapping="true" />
 
-                <HBox alignItems="Center">
-                    <ObjectNumber number="2499" unit="₹" emphasized="true"/>
-                </HBox>
-                <Button text="ADD TO CART" press="onPressAddToCart" class="sapUiSmallMarginTop"/>
-            </VBox>
-
-            <!-- Skipping Rope -->
-            <VBox width="300px" class="sapUiSmallMargin gympagebox">
-                <Carousel height="200px" width="100%">
-                    <Image src="img/skippingrope1.jpg" />
-                    <Image src="img/skippingrope2.webp" />
-                </Carousel>
-
-                <HBox justifyContent="SpaceBetween">
-                    <ObjectStatus text="4.2" icon="sap-icon://favorite" state="Success"/>
-                    <Button icon="sap-icon://heart-2" type="Transparent" press="onPressWishlist"/>
-                </HBox>
-
-                <Text text="Skipping Rope" />
-                <Text text="Premium Quality Skipping Rope"/>
-
-                <HBox alignItems="Center">
-                    <ObjectNumber number="199" unit="₹" emphasized="true"/>
-                </HBox>
-                <Button text="ADD TO CART" press="onPressAddToCart" class="sapUiSmallMarginTop"/>
-            </VBox>
-
-            <!-- Gym Bags -->
-            <VBox width="300px" class="sapUiSmallMargin gympagebox">
-                <Carousel height="200px" width="100%">
-                    <Image src="img/Gymbags.jpg" />
-                    <Image src="img/Gymbags1.jpg" />
-                </Carousel>
-
-                <HBox justifyContent="SpaceBetween">
-                    <ObjectStatus text="4.8" icon="sap-icon://favorite" state="Success"/>
-                    <Button icon="sap-icon://heart-2" type="Transparent" press="onPressWishlist"/>
-                </HBox>
-
-                <Text text="Gym Bags" />
-                <Text text="Spacious and stylish Gym Bag" />
-
-                <HBox alignItems="Center">
-                    <ObjectNumber number="1299" unit="₹" emphasized="true"/>
-                </HBox>
-                <Button text="ADD TO CART" press="onPressAddToCart" class="sapUiSmallMarginTop"/>
-            </VBox>
-
-             <!-- Dumbbells -->
-            <VBox width="300px" class="sapUiSmallMargin gympagebox">
-                <Carousel height="200px" width="100%">
-                    <Image src="img/dumbbells1.jpg" />
-                    <Image src="img/dumbbells2.jpg" />
-                </Carousel>
-
-                <HBox justifyContent="SpaceBetween">
-                    <ObjectStatus text="4.6" icon="sap-icon://favorite" state="Success"/>
-                    <Button icon="sap-icon://heart-2" type="Transparent" press="onPressWishlist"/>
-                </HBox>
-
-                <Text text="Dumbbells" />
-                <Text text="Best selling Dumbbells with Rack" maxLines="2" wrapping="true" />
-
-                <HBox alignItems="Center">
-                    <ObjectNumber number="2499" unit="₹" emphasized="true"/>
-                </HBox>
-                <Button text="ADD TO CART" press="onPressAddToCart" class="sapUiSmallMarginTop"/>
-            </VBox>
-        </FlexBox>
-    </ScrollContainer>
+        <HBox alignItems="Center">
+            <ObjectNumber number="{products>price}" unit="{products>currency}" emphasized="true"/>
+        </HBox>
+        <Button text="ADD TO CART" press="onPressAddToCart" class="sapUiSmallMarginTop"/>
+    </VBox>
+</FlexBox>
+</VBox>
+    <!-- </ScrollContainer> -->
 </l:Splitter>
     </Page>
 </mvc:View>

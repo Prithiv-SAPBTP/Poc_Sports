@@ -41,5 +41,36 @@
       ],
       "quantity": 1
     }
+  ],
+
+  "Products": [
+    {
+      "id":"1",
+      "name": "Dumbbells",
+      "description": "Best selling Dumbbells with Rack",
+      "price": "2499",
+      "currency": "₹",
+      "rating": "4.6",
+      "images": ["img/dumbbells1.jpg", "img/dumbbells2.jpg"]
+    },
+    {
+      "id":"2",
+      "name": "Skipping Rope",
+      "description": "Premium Quality Skipping Rope",
+      "price": "199",
+      "currency": "₹",
+      "rating": "4.2",
+      "images": ["img/skippingrope1.jpg", "img/skippingrope2.webp"]
+    },
+    {
+      "id":"3",
+      "name": "Gym Bags",
+      "description": "Spacious and stylish Gym Bag",
+      "price": "1299",
+      "currency": "₹",
+      "rating": "4.8",
+      "images": ["img/Gymbags.jpg", "img/Gymbags1.jpg"]
+    }
   ]
+
 }

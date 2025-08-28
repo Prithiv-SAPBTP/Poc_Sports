@@ -9,13 +9,6 @@ sap.ui.define([
             var oProductsModel = new sap.ui.model.json.JSONModel();
             oProductsModel.loadData("model/cart.json");
             this.getView().setModel(oProductsModel, "products");
-
-            var oCartModel = this.getOwnerComponent().getModel("cart");
-            if (!oCartModel) {
-                oCartModel = new sap.ui.model.json.JSONModel({ items: [] });
-                this.getOwnerComponent().setModel(oCartModel, "cart");
-            }
-    this.getView().setModel(oCartModel, "cart");
         },
          onPressWishlist:function(oEvent){
             var oButton = oEvent.getSource();
@@ -30,17 +23,25 @@ sap.ui.define([
             }
         },
         onPressAddToCart:function(oEvent){
-            var oView = this.getView();
+           var oView = this.getView();
             var oCartModel = oView.getModel("cart");
-            // var aCartItems = oCartModel.getProperty("/items");
+            var aCartProducts = oCartModel.getProperty("/items") || [];
 
             var oButton = oEvent.getSource();
             var oProductContext = oButton.getBindingContext("products");
             var oProductData = oProductContext.getObject();
-            oProductData.Quantity = 1;
-            oCartModel.setProperty("/items", [oProductData]);
+
+            var oExistingCartData = aCartProducts.find(cartid => cartid.id === oProductData.id); // assuming `id` is unique
+                if (oExistingCartData) {
+                    sap.m.MessageToast.show("This item is already there in your Cart...!!");
+                } else {
+            oProductData.quantity = 1;
+            aCartProducts.push(oProductData);
+            oCartModel.setProperty("/items", aCartProducts);
             oCartModel.refresh(true);
-            MessageToast.show("Added to your Cart...!!")
+
+        sap.m.MessageToast.show("Added to your Cart...!!");
+        }
         },
     });
 });
