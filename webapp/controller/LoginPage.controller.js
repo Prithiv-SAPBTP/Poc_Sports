@@ -8,6 +8,7 @@ sap.ui.define([
         onInit() {
              var oModel = new sap.ui.model.json.JSONModel("model/data.json");
             this.getView().setModel(oModel);
+            
         },
         onPressSignin:function(){
              var oView = this.getView();

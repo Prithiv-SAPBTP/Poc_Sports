@@ -35,16 +35,16 @@
 
     <List items="{cart>/Products}" width="100%">
     <CustomListItem>
-        <HBox justifyContent="SpaceBetween" alignItems="Center" width="100%">
+        <HBox justifyContent="SpaceBetween" alignItems="Center" width="80%">
             
-            <Carousel height="200px" width="300px">
+            <Carousel height="270px" width="320px">
                     <Image src="{cart>images/0}" class="SPimg"/>
                     <Image src="{cart>images/1}" class="SPimg"/>
             </Carousel>
 
             <VBox class="sapUiSmallMarginBegin">
-                <Text text="{cart>name}" class="sapUiMediumMarginBottom"/>
-                <Text text="{cart>description}" class="sapUiSmallMarginBottom"/>
+                <Text text="{cart>name}" />
+                <Text text="{cart>description}" />
 
                 <HBox class="sapUiSmallMarginTop" alignItems="Center">
                     <Button icon="sap-icon://less" press="onDecreaseQuantity" />

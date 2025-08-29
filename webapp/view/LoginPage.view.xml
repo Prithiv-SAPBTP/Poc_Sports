@@ -22,9 +22,9 @@
                         <Input id="signinEmail" type="Email" placeholder="Enter email" width="100%" />
                         
                         <Label text="Password:" class="label" />
-                        <Input id="signinPassword" type="Password" placeholder="Enter password" width="100%" />
-                        
-                        <Button text="Login" press="onPressSignin" class="loginButton" />  
+                        <Input id="signinPassword" type="Password" placeholder="Enter password" width="100%" submit="onPressSignin"/>
+                    
+                        <Button text="Login" press="onPressSignin" class="loginButton"  />  
                     </l:VerticalLayout>
     </VBox>
 

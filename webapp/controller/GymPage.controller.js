@@ -42,9 +42,8 @@ sap.ui.define([
             oCartModel.refresh(true);
 
         sap.m.MessageToast.show("Added to your Cart...!!");
-        }
-
-            
+        } 
+          
         },
 
         // onPressCart: function () {

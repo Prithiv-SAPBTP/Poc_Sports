@@ -36,6 +36,28 @@ sap.ui.define([
 
             oModel.setProperty("/items", aItems);
             MessageToast.show("Item removed from cart");
+
+    //          var oBindingContext = oEvent.getSource().getBindingContext("cart");
+    // var oModel = oBindingContext.getModel();
+
+    // // Full path to the item, e.g. "/items/0" or "/Products/2"
+    // var sPath = oBindingContext.getPath();
+
+    // // Extract the array name (items OR Products) and the index
+    // var aPathParts = sPath.split("/");
+    // var sArrayName = aPathParts[1]; // "items" or "Products"
+    // var iIndex = parseInt(aPathParts[2], 10);
+
+    // // Get the current array
+    // var aData = oModel.getProperty("/" + sArrayName) || [];
+
+    // if (iIndex > -1) {
+    //     aData.splice(iIndex, 1); // remove item
+    //     oModel.setProperty("/" + sArrayName, aData);
+    //     oModel.refresh(true);
+    //     sap.m.MessageToast.show("Item removed from cart");
+    // }
+    
         }
     });
 });

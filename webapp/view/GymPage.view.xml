@@ -53,7 +53,7 @@
 <!-- <Slider   min="799" max="9999" /> -->
 
 <Title text="Category" level="H5" class="sapUiSmallMarginTop"/>
-<SearchField placeholder="Search..." width="100%"/>
+<!-- <SearchField placeholder="Search..." width="100%"/> -->
 <VBox>
 <CheckBox text="Dumbells" />
 <CheckBox text="Kettlebells" />
