@@ -16,46 +16,43 @@
             layout="ResponsiveGridLayout"
             adjustLabelSpan="true">
 
-          <layout:Grid  >
- 
-        <!-- 1st Column -->
+          <!-- <layout:Grid  > -->
+
         <VBox alignItems="Start" justifyContent="Center" >
             <HBox>
                 <Label width="120px" textAlign="End" text="Purchase Type" required="true" showColon="true" class="sapUiTinyMarginTop sapUiTinyMarginEnd"/>
-                <Select width="150px">
+                <Select width="180px">
                     <core:Item />
                 </Select>
             </HBox>
             <HBox >
                 <Label width="120px" textAlign="End" text="Ship to Party" required="true" showColon="true" class="sapUiTinyMarginTop sapUiTinyMarginEnd"/>
-                <Select width="150px">
+                <Select width="180px">
                     <core:Item />
                 </Select>
             </HBox>
             <HBox>
                 <Label width="120px" textAlign="End" text="Address" showColon="true" class="sapUiTinyMarginTop sapUiTinyMarginEnd"/>
-                <TextArea value="" rows="3" growing="true" growingMaxLines="6" width="150px" editable="true"
-                          placeholder=""/>
+                <TextArea  growing="true"  width="180px" editable="true" placeholder=""/>
             </HBox>
         </VBox>
  
-        <!-- 2nd Column -->
-        <VBox alignItems="Start" justifyContent="Start">
+     
+        <VBox alignItems="Start" justifyContent="Center" class="sample1">
             <HBox>
                 <Label width="120px" textAlign="End" text="Payment Type" showColon="true" class="sapUiTinyMarginEnd sapUiTinyMarginTop"/>
-                <Select width="150px">
+                <Select width="180px">
                     <core:Item />
                 </Select>
             </HBox>
             <HBox>
                 <Label width="120px" labelFor="dealerRefField" required="true" textAlign="End"
                        text="Dealer Ref No" showColon="true" class="sapUiTinyMarginEnd sapUiTinyMarginTop"/>
-                <Input width="150px" id="dealerRefField" placeholder="" required="true"/>
+                <Input width="180px" id="dealerRefField" placeholder="" required="true"/>
             </HBox>
             <HBox>
-                <Label width="120px" labelFor="poRefField" textAlign="End"
-                       text="PO Ref Date" showColon="true" class="sapUiTinyMarginEnd sapUiTinyMarginTop"/>
-                <DatePicker id="DP2" width="150px"
+                <Label width="120px"  textAlign="End"  text="PO Ref Date" showColon="true" class="sapUiTinyMarginEnd sapUiTinyMarginTop"/>
+                <DatePicker id="DP2" width="180px"
                     value="{
                         'path':'',
                         'type':'sap.ui.model.type.Date',
@@ -66,10 +63,8 @@
                     class="sapUiSmallMarginBottom"/>
             </HBox>
         </VBox>
-        <layout:Grid>
-        </layout:Grid>
-        <!-- 3rd Column -->
-        <VBox alignItems="Start" justifyContent="Start">
+    
+        <VBox alignItems="Start" justifyContent="Center" class="sample2">
             <HBox>
                 <Label width="120px" textAlign="End" text="Credit Limit" showColon="true"
                        class="sapUiTinyMarginEnd sapUiTinyMarginTop"/>
@@ -91,8 +86,8 @@
                 <mdc:Field  placeholder="" required="true" editMode="Display"/>
             </HBox>
         </VBox>
-        <!-- 4th Column -->
-        <VBox alignItems="Start" justifyContent="Start">
+ 
+        <!-- <VBox alignItems="Start" justifyContent="Start">
             <HBox >
                 <Label width="120px" textAlign="End" text="Total Order Quantity" showColon="true"
                        class="sapUiTinyMarginEnd sapUiTinyMarginTop labelWrap"/>
@@ -113,10 +108,68 @@
                        class="sapUiTinyMarginTop labelWrap" showColon="true"/>
                 <mdc:Field  placeholder="" required="true" editMode="Display"/>
             </HBox>
-        </VBox>
-    </layout:Grid>
-
+        </VBox> -->
+    <!-- </layout:Grid> -->
         </f:SimpleForm>
+        
+ <VBox id="seqSection" class="sapUiSmallMarginTop">
+
+            <!-- <Toolbar>
+                <Title text="SEQ" level="H2" />
+            </Toolbar> -->
+
+            <Toolbar>
+                <RadioButtonGroup columns="2" selectedIndex="0" select=".onRadioSelect">
+                    <buttons>
+                        <RadioButton text="Manual Selection" />
+                        <RadioButton text="Excel Upload" />
+                    </buttons>
+                </RadioButtonGroup>
+
+                <HBox id="uploadBox" class="sapUiSmallMargin" visible="false">
+                    <Button icon="sap-icon://upload" text="UPLOAD" />
+                </HBox>
+            </Toolbar>
+
+          
+
+            <!-- <Table
+                id="itemsTable"
+                inset="false"
+                growing="true">
+
+                <headerToolbar>
+                    <Toolbar>
+                        <Title text="Items" level="H3" />
+                        <ToolbarSpacer />
+                        <Button text="Add Item" type="Emphasized" icon="sap-icon://add" press="onAddItem" />
+                    </Toolbar>
+                </headerToolbar>
+
+                <columns>
+                    <Column demandPopin="true" ><Text text="Seq" /></Column>
+                    <Column><Text text="Material" /></Column>
+                    <Column><Text text="Quantity" /></Column>
+                    <Column demandPopin="true" ><Text text="In Stock" /></Column>
+                    <Column demandPopin="true" ><Text text="ETA" /></Column>
+                    <Column demandPopin="true" ><Text text="MSRP" /></Column>
+                </columns>
+
+                <items>
+                    <ColumnListItem>
+                        <cells>
+                            <Input value="{itemsModel>seq}" type="Number" placeholder="0" />
+                            <Input value="{itemsModel>material}" placeholder="Enter Material" />
+                            <Input value="{itemsModel>quantity}" type="Number" placeholder="0" />
+                            <ObjectStatus state="{itemsModel>stockState}" text="{itemsModel>stockStatus}" />
+                            <Text text="{itemsModel>eta}" />
+                            <Text text="{itemsModel>msrp}" />
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table> -->
+            
+        </VBox>
 
         <footer>
             <Toolbar>
