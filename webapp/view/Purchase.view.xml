@@ -5,16 +5,18 @@
     xmlns:mdc="sap.ui.mdc"
     xmlns:layout="sap.ui.layout"
     xmlns:f="sap.ui.layout.form"
-    xmlns:core="sap.ui.core">
+    xmlns:core="sap.ui.core"
+    xmlns:mdct="sap.ui.mdc.table">
 
     <mvc:XMLView viewName="decathlon.view.TitleBar" />
-    <Page id="createPage" title="Create New Purchase Order">
+    <Page id="createPage" title="Create New Purchase Order" >
 
         <f:SimpleForm
             id="purchaseForm"
             editable="true"
             layout="ResponsiveGridLayout"
-            adjustLabelSpan="true">
+            adjustLabelSpan="true"
+           >
 
           <!-- <layout:Grid  > -->
 
@@ -111,8 +113,13 @@
         </VBox> -->
     <!-- </layout:Grid> -->
         </f:SimpleForm>
+         <f:SimpleForm
+            editable="true"
+            layout="ResponsiveGridLayout"
+            adjustLabelSpan="true"
+           >
         
- <VBox id="seqSection" class="sapUiSmallMarginTop">
+ <!-- <VBox id="seqSection" class="sapUiSmallMarginTop"> -->
 
             <!-- <Toolbar>
                 <Title text="SEQ" level="H2" />
@@ -133,8 +140,8 @@
 
           
 
-            <!-- <Table
-                id="itemsTable"
+            <Table
+                id="itemsTable" items="{products>/po}"
                 inset="false"
                 growing="true">
 
@@ -158,18 +165,66 @@
                 <items>
                     <ColumnListItem>
                         <cells>
-                            <Input value="{itemsModel>seq}" type="Number" placeholder="0" />
-                            <Input value="{itemsModel>material}" placeholder="Enter Material" />
-                            <Input value="{itemsModel>quantity}" type="Number" placeholder="0" />
-                            <ObjectStatus state="{itemsModel>stockState}" text="{itemsModel>stockStatus}" />
-                            <Text text="{itemsModel>eta}" />
-                            <Text text="{itemsModel>msrp}" />
+                            <Input value="{products>seq}" type="Number"/>
+                            <Input value="{products>material}"/>
+                            <Input value="{products>quantity}" type="Number"/>
+                            <ObjectStatus state="{products>stockState}" text="{products>inStock}" />
+                            <Input value="{products>eta}"/>
+                            <Input value="{products>msrp}"/>
+                            <Input value="{products>dealerPrice}"/>
+                            <Input value="{products>vat}"/>
+                            <Input value="{products>amount}"/>
+
                         </cells>
                     </ColumnListItem>
                 </items>
-            </Table> -->
-            
-        </VBox>
+            </Table>
+               <!-- <mdc:Table
+                id="itemsTable"
+                header="Purchase Orders"
+                p13nMode="Column,Sort,Group,Filter"
+                threshold="25"
+                showRowCount="true"
+                useColumnLabelsAsTooltips="true"
+                delegate="{
+                    name: 'sap/ui/mdc/experimental/JSONTableDelegate',
+                    payload: {
+                        bindingPath: 'products>/po'
+                    }
+                }"
+                selectionMode="Multi">
+
+                <mdc:actions >
+                    <Button text="Add Item" type="Emphasized" icon="sap-icon://add" press="onPressAddItem" />
+                </mdc:actions>
+
+                <mdct:Column propertyKey="seq" header="Seq">
+                    <Input value="{po>seq}" type="Number" placeholder="0" />
+                </mdct:Column>
+
+                <mdct:Column propertyKey="material" header="Material">
+                    <Input value="{po>material}" placeholder="Enter Material" />
+                </mdct:Column>
+
+                <mdct:Column propertyKey="quantity" header="Quantity">
+                    <Input value="{po>quantity}" type="Number" placeholder="0" />
+                </mdct:Column>
+
+                <mdct:Column propertyKey="stockStatus" header="In Stock">
+                    <ObjectStatus state="{po>stockState}" text="{po>stockStatus}" />
+                </mdct:Column>
+
+                <mdct:Column propertyKey="eta" header="ETA">
+                    <Input value="{po>eta}" placeholder="Enter ETA" />
+                </mdct:Column>
+
+                <mdct:Column propertyKey="msrp" header="MSRP">
+                    <Input value="{po>msrp}" placeholder="0.00" type="Number" />
+                </mdct:Column>
+
+            </mdc:Table> -->
+        <!-- </VBox> -->
+         </f:SimpleForm>
 
         <footer>
             <Toolbar>
@@ -178,6 +233,7 @@
                 <Button text="Save" type="Accept" icon="sap-icon://accept" />
             </Toolbar>
         </footer>
+
 
     </Page>
 </mvc:View>

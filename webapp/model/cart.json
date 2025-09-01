@@ -71,6 +71,31 @@
       "rating": "4.8",
       "images": ["img/Gymbags.jpg", "img/Gymbags1.jpg"]
     }
+  ],
+
+  "po": [
+    {
+      "seq": "10",
+      "material": "CLASSIC C5 OLIV (1800147)",
+      "quantity": "10",
+      "inStock": "Available",
+      "eta": "20/08/2025",
+      "msrp": "1500.00",
+      "dealerPrice": "1200.00",
+      "vat": "18%",
+      "amount": "12000.00"
+    },
+    {
+      "seq": "20",
+      "material": "C5 OIL 123487",
+      "quantity": "30",
+      "inStock": "Available",
+      "eta": "01/08/2025",
+      "msrp": "1299.00",
+      "dealerPrice": "1000.00",
+      "vat": "12%",
+      "amount": "30000.00"
+    }
   ]
 
 }
