@@ -6,11 +6,10 @@
     xmlns:tnt="sap.tnt"
 	height="100%"
 	class="side-navigation-demo">
-    
-    <Page  title="Gym and Fitness" showHeader="false" enableScrolling="false">
-        <mvc:XMLView viewName="decathlon.view.TitleBar"/>
-        	<l:Splitter height="100%" width="100%">
 
+    <mvc:XMLView viewName="decathlon.view.TitleBar"/>
+    <Page  title="Gym and Fitness" showHeader="false" enableScrolling="false">        
+        	<l:Splitter height="100%" width="100%">
     <VBox width="100%">
         <List id="categoryList" mode="SingleSelectMaster">
             <items>

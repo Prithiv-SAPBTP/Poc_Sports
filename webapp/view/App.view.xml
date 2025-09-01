@@ -3,5 +3,28 @@
     xmlns:mvc="sap.ui.core.mvc"
     xmlns="sap.m">
     <App id="app">
+    
+   <Page showHeader="false">
+            <customHeader>
+                <Bar design="Header">
+                    <contentLeft>
+                        <Image src="img/lt_logo.webp" class="image1"/>
+                        <Title text="SPORTS" />
+                    </contentLeft>
+
+                    <contentRight>
+                        <Button icon="sap-icon://question-mark" tooltip="Help" press="onPressHelp">
+                            <!-- <dependents>
+                                <core:Fragment fragmentName="decathlon.view.Help" type="XML" />
+                            </dependents> -->
+                        </Button>
+                        <Button icon="sap-icon://heart-2" tooltip="Wishlist" press="onPressWishlist"/>
+                        <Button icon="sap-icon://cart" tooltip="Cart" press="onPressCart"/>
+                    </contentRight>
+                </Bar>
+            </customHeader>
+
+            <NavContainer id="navContainer"/>
+        </Page>
     </App>
 </mvc:View>
