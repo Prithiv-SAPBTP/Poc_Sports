@@ -2,9 +2,10 @@
     xmlns:mvc="sap.ui.core.mvc"
     xmlns="sap.m"
     xmlns:l="sap.ui.layout" displayBlock="true">
-    <Page showHeader="false">
-     <mvc:XMLView viewName="decathlon.view.TitleBar"/>
 
+    <!-- <mvc:XMLView viewName="decathlon.view.TitleBar"/> -->
+    <Page showHeader="false" >
+   
 		<IconTabHeader mode="Inline" select="onTabSelect">
 		<items>
 			<IconTabFilter key="Purchase" text="Purchase"  />
@@ -13,6 +14,7 @@
 			<IconTabFilter key="Publications" text="Publications"/>
 		</items>
 	</IconTabHeader>
+
     <Carousel id="sportsCarousel" height="400px" width="100%" >
                 <ScrollContainer horizontal="true" vertical="false" height="550px" class="hpscroll">
     <HBox items="">
@@ -57,7 +59,6 @@
 </Carousel>
 
 		<!-- <Carousel class="sapUiContentPadding" loop="true" height="70%" >
-
 		<Image src="img/HP1.jpg"  />
 		<Image src="img/HP2.jpg"  />
 		<Image src="img/HP3.jpg"  />

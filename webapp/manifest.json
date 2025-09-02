@@ -68,7 +68,10 @@
       "config": {
         "routerClass": "sap.m.routing.Router",
         "controlAggregation": "pages",
-        "controlId": "app",
+        "controlId": "nav",
+        "bypassed": {
+        "target": "RouteLoginPage"
+       },
         "transition": "slide",
         "type": "View",
         "viewType": "XML",

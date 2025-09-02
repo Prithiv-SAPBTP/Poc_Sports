@@ -7,8 +7,8 @@
 	height="100%"
 	class="side-navigation-demo">
     
-    <Page id="page" title="Gym and Fitness" showHeader="false" enableScrolling="false">
-        <mvc:XMLView viewName="decathlon.view.TitleBar"/>
+    <Page id="Gympage" title="Gym and Fitness" showHeader="false" enableScrolling="false">
+        <!-- <mvc:XMLView viewName="decathlon.view.TitleBar"/> -->
          <!-- <content>
 			<ComboBox>
                 <core:Item  text="Dumbells" />
@@ -27,7 +27,6 @@
 			</ComboBox>
 		</content> -->
         	<l:Splitter height="100%" width="100%">
-    <!-- Left Side: Category List -->
     <VBox width="100%">
         <List mode="SingleSelectMaster">
             <items>
@@ -83,18 +82,18 @@
     </VBox>
 
     <!-- <ScrollContainer width="100%" height="100%"   class="container" > -->
-    <VBox class="container">
+    <HBox class="container">
         <layoutData>
             <l:SplitterLayoutData size="80%" />
         </layoutData>
 
-       <FlexBox justifyContent="SpaceAround" items="{products>/Products}">
-    <VBox width="300px" class="sapUiSmallMargin gympagebox">
+       <FlexBox wrap="Wrap" justifyContent="Start" items="{products>/Products}" >
+    <VBox width="280px" class="sapUiSmallMargin gympagebox">
         <Carousel height="200px" width="100%">
-            <!-- <items> -->
+    
                 <Image src="{products>images/0}" />
                 <Image src="{products>images/1}" />
-            <!-- </items> -->
+    
         </Carousel>
 
         <HBox justifyContent="SpaceBetween">
@@ -111,7 +110,7 @@
         <Button text="ADD TO CART" press="onPressAddToCart" class="sapUiSmallMarginTop"/>
     </VBox>
 </FlexBox>
-</VBox>
+</HBox>
     <!-- </ScrollContainer> -->
 </l:Splitter>
     </Page>

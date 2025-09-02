@@ -7,7 +7,7 @@
 	height="100%"
 	class="side-navigation-demo">
 
-    <mvc:XMLView viewName="decathlon.view.TitleBar"/>
+    <!-- <mvc:XMLView viewName="decathlon.view.TitleBar"/> -->
     <Page  title="Gym and Fitness" showHeader="false" enableScrolling="false">        
         	<l:Splitter height="100%" width="100%">
     <VBox width="100%">

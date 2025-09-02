@@ -3,7 +3,7 @@
     xmlns="sap.m"
    >
    
-   <mvc:XMLView viewName="decathlon.view.TitleBar"/>
+   <!-- <mvc:XMLView viewName="decathlon.view.TitleBar"/> -->
    <Page title="Catalogue" showHeader="false" >
 
     <VBox fitContainer="true" class="sapUiContentPadding">
