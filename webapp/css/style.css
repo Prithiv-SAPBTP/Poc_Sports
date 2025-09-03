@@ -46,14 +46,10 @@
 
 
   .image1{
-    /* object-fit: cover;   */
-    /* display: block; */
-    /* margin-left: 20px !important; */
-    width: 35%;
-    height: 120%;
+    width: 30%;
+    height: 100%;
   }
   .HomeText{
- 
     color: white !important;
   }
   .transparentButton .sapMBtnInner {
@@ -98,9 +94,3 @@
   padding-top: 2%;
   padding-left: 2%;
 }
-/* .sample1{
-  padding-left: 80%;
-}
-.sample2{
-  padding-right: 60%;
-} */

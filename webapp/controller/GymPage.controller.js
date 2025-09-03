@@ -1,8 +1,9 @@
 sap.ui.define([
     "sap/ui/core/mvc/Controller",
     "sap/m/MessageToast",
-    "sap/ui/core/Fragment"
-], (Controller,MessageToast) => {
+    "sap/ui/core/Fragment",
+    "sap/m/MessageBox"
+], (Controller,MessageToast,Fragment,MessageBox) => {
     "use strict";
 
     return Controller.extend("decathlon.controller.GymPage", {
@@ -32,6 +33,14 @@ sap.ui.define([
             var oProductContext = oButton.getBindingContext("products");
             var oProductData = oProductContext.getObject();
 
+            // for (let index = 0; index < aCartProducts.length; index++) {
+
+            //     if (aCartProducts[index].id == oProductData.id ) {
+                   
+                    
+            //     }
+                
+            // }
             var oExistingCartData = aCartProducts.find(cartid => cartid.id === oProductData.id); // assuming `id` is unique
                 if (oExistingCartData) {
                     sap.m.MessageToast.show("This item is already there in your Cart...!!");
@@ -41,7 +50,9 @@ sap.ui.define([
             oCartModel.setProperty("/Products", aCartProducts);
             oCartModel.refresh(true);
 
-        sap.m.MessageToast.show("Added to your Cart...!!");
+        // sap.m.MessageToast.show("Added to your Cart...!!");
+        	MessageBox.success("Added to your Cart...!!");
+
         } 
           
         },

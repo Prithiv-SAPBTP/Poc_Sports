@@ -3,7 +3,7 @@
     xmlns="sap.m"
     xmlns:l="sap.ui.layout">
   
-    <Page>
+    <Page showHeader="false">
    <content>
             <List items="{cart>/items}" width="100%">
                 <CustomListItem >

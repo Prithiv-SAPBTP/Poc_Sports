@@ -7,11 +7,9 @@ sap.ui.define([
           onInit: function () {
       this.getOwnerComponent().getRouter().attachRouteMatched(this.onRouteMatched, this);
     },
- 
     onRouteMatched: function (oEvent) {
       var sRouteName = oEvent.getParameter("name");
       var oPage = this.byId("appPage");
-
       if (sRouteName == "RouteLoginPage") {
         oPage.setVisible(false);
       } else {
@@ -20,11 +18,11 @@ sap.ui.define([
     },
      onPressCart: function () {
             var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
-                    oRouter.navTo("Cart")
+            oRouter.navTo("Cart")
         },
        onPressHelp: function(oEvent){
         var oButton = oEvent.getSource();
-		this.byId("actionSheet").openBy(oButton);
+		    this.byId("actionSheet").openBy(oButton);
        }
   });
 });

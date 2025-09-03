@@ -25,7 +25,7 @@
             </items>
         </List>
 
-        <VBox class="sapUiSmallMargin">
+        <VBox class="sapUiSmallMargin"> 
             <Title text="Filters" level="H2" />
             <Image src="sap-icon://add-filter" ></Image>
             <Title text="Price" level="H5" />

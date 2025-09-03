@@ -6,9 +6,8 @@ sap.ui.define([
 
     return Controller.extend("decathlon.controller.Cart", {
         onInit() {
-            
         },
-             onIncreaseQuantity: function (oEvent) {
+        onIncreaseQuantity: function (oEvent) {
             var oBindingvalue = oEvent.getSource().getBindingContext("cart");
             var oValue = oBindingvalue.getObject();
             oValue.quantity++;
