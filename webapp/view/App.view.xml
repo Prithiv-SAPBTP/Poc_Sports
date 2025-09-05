@@ -5,9 +5,9 @@
     xmlns:core="sap.ui.core">
     <App id="app" >
     
-   <Page showHeader="true" >
+   <Page showHeader="true" id="appPage">
    <customHeader>
-             <Bar design="Header" id="appPage" >
+             <Bar design="Header" id="appPage1" >
               <contentLeft>
                 <Image  src="../img/lt_logo.webp" class="image1"/>
               </contentLeft>

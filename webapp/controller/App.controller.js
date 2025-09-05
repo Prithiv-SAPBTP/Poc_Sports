@@ -11,9 +11,10 @@ sap.ui.define([
       var sRouteName = oEvent.getParameter("name");
       var oPage = this.byId("appPage");
       if (sRouteName == "RouteLoginPage") {
-        oPage.setVisible(false);
+        // oPage.setVisible(false);
+        oPage.setShowHeader(false);
       } else {
-        oPage.setVisible(true);
+        oPage.setShowHeader(true);
       }
     },
      onPressCart: function () {

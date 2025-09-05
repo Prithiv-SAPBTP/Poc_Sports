@@ -70,7 +70,7 @@
         "controlAggregation": "pages",
         "controlId": "nav",
         "bypassed": {
-        "target": "RouteLoginPage"
+        "target": "LoginPage"
        },
         "transition": "slide",
         "type": "View",
