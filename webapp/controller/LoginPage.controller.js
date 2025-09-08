@@ -34,9 +34,9 @@ sap.ui.define([
             }
         },
          onSelect: function (oEvent) {
-            var sKey = oEvent.getParameter("key");
+            var sKey = oEvent.getParameter("id");
 
-            if (sKey === "signin") {
+            if (sKey === "container-decathlon---LoginPage--b") {
                 this.byId("signinForm").setVisible(true);
                 this.byId("signupForm").setVisible(false);
             } else {

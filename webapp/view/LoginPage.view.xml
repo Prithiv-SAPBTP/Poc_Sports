@@ -8,12 +8,12 @@
      <VBox class="loginPage" > 
         <VBox class="loginForm" >
         <VBox class="signin" >
-        	<IconTabHeader class="icontab" select="onSelect" >
+        	<!-- <IconTabHeader class="icontab" select="onSelect" >
 		<items  >        
 			<IconTabFilter key="signin" text="Signin"  />
 			<IconTabFilter key="signup" text="signup" />
 		</items>        
-	</IconTabHeader>
+	</IconTabHeader> -->
 </VBox>
     <!-- signin  -->
      <VBox id="signinForm" >
@@ -25,6 +25,7 @@
                         <Input id="signinPassword" type="Password" placeholder="Enter password" width="100%" submit="onPressSignin"/>
                     
                         <Button text="Login" press="onPressSignin" class="loginButton"  />  
+                        <Link text="New User?" class="linktag" press="onSelect"/>
                     </l:VerticalLayout>
     </VBox>
 
@@ -44,6 +45,7 @@
                         <Input id="signupConfirmPassword" type="Password" placeholder="Confirm password" width="100%" />
                         
                         <Button text="Register" press="onPressSignup" class="loginButton" />
+                        <Link text="Back to Login" id="b" press="onSelect"/>
                     </l:VerticalLayout>
                 </VBox>
     </VBox>
