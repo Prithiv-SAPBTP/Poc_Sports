@@ -58,6 +58,8 @@
 </ScrollContainer>
 </Carousel>
 
+
+
 		<!-- <Carousel class="sapUiContentPadding" loop="true" height="70%" >
 		<Image src="img/HP1.jpg"  />
 		<Image src="img/HP2.jpg"  />

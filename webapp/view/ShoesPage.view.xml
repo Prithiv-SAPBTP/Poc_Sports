@@ -11,7 +11,7 @@
     <Page  title="Gym and Fitness" showHeader="false" enableScrolling="false">        
         	<l:Splitter height="100%" width="100%">
     <VBox width="100%">
-        <List id="categoryList" mode="SingleSelectMaster">
+        <!-- <List id="categoryList" mode="SingleSelectMaster">
             <items>
                 <StandardListItem  title="Running Shoes" />
                 <StandardListItem  title="Gym Shoes" />
@@ -23,19 +23,32 @@
                 <StandardListItem  title="Socks" />
                 <StandardListItem  title="Flip Flops" />
             </items>
-        </List>
+        </List> -->
+
+<VBox class="sapUiSmallMargin">
+<Title text="Filters" level="H4" class="sapUiSmallMarginTop"/>
+<VBox>
+<CheckBox text="Running Shoes" />
+<CheckBox text="Gym Shoes" />
+<CheckBox text="Trekking Shoes" />
+<CheckBox text="Walking Shoes" />
+<CheckBox text="Hikking Shoes" />
+<CheckBox text="Water Proof Shoes" />
+<CheckBox text="Sandels" />
+<CheckBox text="Socks" />
+<CheckBox text="Flip Flops" />
+</VBox>
+</VBox>
 
         <VBox class="sapUiSmallMargin"> 
-            <Title text="Filters" level="H2" />
+            <!-- <Title text="Filters" level="H2" /> -->
             <Image src="sap-icon://add-filter" ></Image>
             <Title text="Price" level="H5" />
         <HBox>
-            <Input id="minPrice" value="799" width="100px"  editable="false"/>
+            <Input id="minPrice" value="799"  editable="false"/>
             <Text text=" To " class="sapUiSmallMarginBeginEnd"/>
-            <Input id="maxPrice" value="9999" width="100px" editable="false"/>
-        </HBox>
-            <Slider  id="priceSlider" min="799" max="9999" />
- 
+            <Input id="maxPrice" value="9999"  editable="false"/>
+        </HBox> 
 
         <Title text="Gender" level="H5" class="sapUiSmallMarginTop"/>
         <VBox>
@@ -81,14 +94,14 @@
             <l:SplitterLayoutData size="80%" />
         </layoutData>
 
-       <FlexBox justifyContent="SpaceAround" items="{products>/items}">
+       <FlexBox wrap="Wrap" justifyContent="SpaceAround" items="{products>/items}">
     <VBox width="300px" class="sapUiSmallMargin gympagebox">
 
         <Carousel height="200px" width="100%" pages="{products>images}">
             <Image src="{products>}" class="SPimg"/>
         </Carousel>
 
-        <HBox justifyContent="SpaceBetween">
+        <HBox justifyContent="SpaceBetween" class="sapUiSmallMargin">
             <ObjectStatus text="{products>rating}" icon="sap-icon://favorite" state="Success"/>
             <Button icon="sap-icon://heart-2" type="Transparent" press="onPressWishlist"/>
         </HBox>

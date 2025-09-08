@@ -28,7 +28,7 @@
 		</content> -->
         	<l:Splitter height="100%" width="100%">
     <VBox width="100%">
-        <List mode="SingleSelectMaster">
+        <!-- <List mode="SingleSelectMaster">
             <items>
                 <StandardListItem  title="Dumbells" />
                 <StandardListItem  title="Iron weighted plates" />
@@ -40,14 +40,28 @@
                 <StandardListItem  title="Lat Pulldown Machine" />
                 <StandardListItem  title="Cable Crossover Machine" />
             </items>
-        </List>
+        </List> -->
+        <VBox class="sapUiSmallMargin">
+<Title text="Filters" level="H6" class="sapUiSmallMarginTop"/>
+<VBox>
+<CheckBox text="Dumbells" />
+<CheckBox text="Iron weighted plates" />
+<CheckBox text="Rubber weighted plates" />
+<CheckBox text="Kettlebells" />
+<CheckBox text="Smith Machine" />
+<CheckBox text="Leg Press Machine" />
+<CheckBox text="Chest Press Machine" />
+<CheckBox text="Lat Pulldown Machine" />
+<CheckBox text="Cable Crossover Machine" />
+</VBox>
+</VBox>
         <VBox class="sapUiSmallMargin">
  
 <Title text="Price" level="H5" />
 <HBox>
-<Input value="799" width="100px" />
+<Input value="799" />
 <Text text=" To " class="sapUiSmallMarginBeginEnd"/>
-<Input  value="9999" width="100px" />
+<Input  value="9999" />
 </HBox>
 <!-- <Slider   min="799" max="9999" /> -->
 
@@ -60,8 +74,8 @@
 </VBox>
 
 <Title text="Size" level="H5" class="sapUiSmallMarginTop"/>
-<SearchField placeholder="Search size..." width="100%"/>
-<ScrollContainer height="200px" vertical="true">
+<SearchField placeholder="Search size..."/>
+<ScrollContainer height="200px" vertical="true" >
 <VBox>
 <CheckBox text="5 kg" />
 <CheckBox text="7.5 kg" />
@@ -74,7 +88,7 @@
 <CheckBox text="35 kg" />
 <CheckBox text="40 kg" />
 </VBox>
-</ScrollContainer>
+</ScrollContainer >
             </VBox>
         <layoutData>
             <l:SplitterLayoutData size="20%" />
@@ -96,9 +110,9 @@
     
         </Carousel>
 
-        <HBox justifyContent="SpaceBetween">
+        <HBox justifyContent="SpaceBetween" class="sapUiSmallMargin">
             <ObjectStatus text="{products>rating}" icon="sap-icon://favorite" state="Success"/>
-            <Button icon="sap-icon://heart-2" type="Transparent" press="onPressWishlist"/>
+            <Button icon="sap-icon://heart-2" type="Transparent" press="onPressWishlist" />
         </HBox>
 
         <Text text="{products>name}" />
