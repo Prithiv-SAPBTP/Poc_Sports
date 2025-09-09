@@ -4,6 +4,7 @@
     xmlns="sap.m"
     xmlns:mdc="sap.ui.mdc"
     xmlns:layout="sap.ui.layout"
+    xmlns:u="sap.ui.unified"
     xmlns:f="sap.ui.layout.form"
     xmlns:core="sap.ui.core"
     xmlns:mdct="sap.ui.mdc.table">
@@ -126,16 +127,41 @@
             </Toolbar> -->
 
             <Toolbar>
-                <RadioButtonGroup columns="2" selectedIndex="0" select=".onRadioSelect">
+                <RadioButtonGroup columns="2" selectedIndex="0" select="onRadioSelect">
                     <buttons>
-                        <RadioButton text="Manual Selection" />
-                        <RadioButton text="Excel Upload" />
+                        <RadioButton text="Manual Selection" id="manual"/>
+                        <RadioButton text="Excel Upload" id="excel"/>
                     </buttons>
                 </RadioButtonGroup>
 
-                <HBox id="uploadBox" class="sapUiSmallMargin" visible="false">
-                    <Button icon="sap-icon://upload" text="UPLOAD" />
-                </HBox>
+                 <!-- <layout:VerticalLayout> -->
+		<u:FileUploader
+			id="fileUploader"
+			name="myFileUpload"
+			uploadUrl="upload/"
+			tooltip="Upload your file to the local server"
+			uploadComplete="handleUploadComplete"
+			change="handleValueChange"
+			typeMissmatch="handleTypeMissmatch"
+			style="Emphasized"
+			fileType="txt,jpg,xlsx"
+			placeholder="Choose a file for Upload..." visible="false">
+				<u:parameters>
+					<u:FileUploaderParameter
+						name="Accept-CH"
+						value="Viewport-Width"/>
+					<u:FileUploaderParameter
+						name="Accept-CH"
+						value="Width"/>
+					<u:FileUploaderParameter
+						name="Accept-CH-Lifetime"
+						value="86400"/>
+				</u:parameters>
+			</u:FileUploader>
+		<Button id="fileUploadbutton"
+			text="Upload File"
+			press="handleUploadPress" visible="false"/>
+	<!-- </layout:VerticalLayout> -->
             </Toolbar>
 
           
@@ -179,50 +205,7 @@
                     </ColumnListItem>
                 </items>
             </Table>
-               <!-- <mdc:Table
-                id="itemsTable"
-                header="Purchase Orders"
-                p13nMode="Column,Sort,Group,Filter"
-                threshold="25"
-                showRowCount="true"
-                useColumnLabelsAsTooltips="true"
-                delegate="{
-                    name: 'sap/ui/mdc/experimental/JSONTableDelegate',
-                    payload: {
-                        bindingPath: 'products>/po'
-                    }
-                }"
-                selectionMode="Multi">
-
-                <mdc:actions >
-                    <Button text="Add Item" type="Emphasized" icon="sap-icon://add" press="onPressAddItem" />
-                </mdc:actions>
-
-                <mdct:Column propertyKey="seq" header="Seq">
-                    <Input value="{po>seq}" type="Number" placeholder="0" />
-                </mdct:Column>
-
-                <mdct:Column propertyKey="material" header="Material">
-                    <Input value="{po>material}" placeholder="Enter Material" />
-                </mdct:Column>
-
-                <mdct:Column propertyKey="quantity" header="Quantity">
-                    <Input value="{po>quantity}" type="Number" placeholder="0" />
-                </mdct:Column>
-
-                <mdct:Column propertyKey="stockStatus" header="In Stock">
-                    <ObjectStatus state="{po>stockState}" text="{po>stockStatus}" />
-                </mdct:Column>
-
-                <mdct:Column propertyKey="eta" header="ETA">
-                    <Input value="{po>eta}" placeholder="Enter ETA" />
-                </mdct:Column>
-
-                <mdct:Column propertyKey="msrp" header="MSRP">
-                    <Input value="{po>msrp}" placeholder="0.00" type="Number" />
-                </mdct:Column>
-
-            </mdc:Table> -->
+              
         <!-- </VBox> -->
          </f:SimpleForm>
 

@@ -13,6 +13,9 @@ sap.ui.define([
         },
 
         init() {
+
+            jQuery.sap.includeScript("libs/xlsx.full.min.js", "XLSX");
+
             // call the base component's init function
             UIComponent.prototype.init.apply(this, arguments);
 
@@ -24,6 +27,8 @@ sap.ui.define([
 
             var oCartModel = new sap.ui.model.json.JSONModel({ items: [] });
             this.setModel(oCartModel, "cart");
+
+            
 
             // var oCartModel1 = new sap.ui.model.json.JSONModel({ Products: [] });
             // this.setModel(oCartModel1, "products");
