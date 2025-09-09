@@ -34,30 +34,18 @@ sap.ui.define([
 		},
 
 		handleUploadPress: function() {
-			// var oFileUploader = this.byId("fileUploader");
-			// if (!oFileUploader.getValue()) {
-			// 	MessageToast.show("Choose a file first");
-			// 	return;
-			// }
-			// oFileUploader.checkFileReadable().then(function() {
-			// 	oFileUploader.upload();
-			// }, function(error) {
-			// 	MessageToast.show("The file cannot be read. It may have changed.");
-			// }).then(function() {
-			// 	oFileUploader.clear();
-			// });
-    var oFileUploader = this.byId("fileUploader");
-    var oFile = oFileUploader.oFileUpload.files[0]; 
+        var oFileUploader = this.byId("fileUploader");
+        var oFile = oFileUploader.oFileUpload.files[0]; 
 
-    if (!oFile) {
-        MessageToast.show("Choose a file first");
-        return;
-    }
+        if (!oFile) {
+            MessageToast.show("Choose a file first");
+            return;
+        }
 
-    var reader = new FileReader();
-    var that = this;
+        var reader = new FileReader();
+        var that = this;
 
-    reader.onload = function (e) {
+        reader.onload = function (e) {
         var data = new Uint8Array(e.target.result);
         var workbook = XLSX.read(data, { type: 'array' });
 
@@ -65,16 +53,15 @@ sap.ui.define([
         var firstSheet = workbook.SheetNames[0];
         var excelData = XLSX.utils.sheet_to_json(workbook.Sheets[firstSheet]);
 
-        // Now merge this with your model
+        // Now merge this with model
         var oModel = that.getView().getModel("products");
         var aExisting = oModel.getProperty("/po") || [];
 
-        // Append Excel data
+        // Add Excel data
         aExisting = aExisting.concat(excelData);
         oModel.setProperty("/po", aExisting);
         MessageToast.show("Excel data uploaded successfully!");
     };
-
     reader.readAsArrayBuffer(oFile);
 		},
 
